@@ -1,7 +1,7 @@
 <?php
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // disable direct access
+    exit; // disable direct access.
 }
 
 if ( ! class_exists('MMPlus_Toggle_Blocks') ) :

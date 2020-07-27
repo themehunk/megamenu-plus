@@ -1,7 +1,7 @@
 <?php
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // disable direct access
+    exit; // disable direct access.
 }
 
 if ( ! class_exists( 'MMPlus_Menu_Style_Manager' ) ) :
@@ -31,7 +31,7 @@ final class MMPlus_Menu_Style_Manager {
      */
     public function mmplus_get_default_theme(){
         return apply_filters("mmplus_default_theme", array(
-            'title'  => __("Default", "megamenu-plus"),
+            'title'  => __("Default", "mmplus"),
             'menu_item_link_height'  => '40',
             'menu_item_align'        => 'left',
             'menu_bg_color'          => '#fff',

@@ -6,7 +6,7 @@
      */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // disable direct access
+    exit; // disable direct access.
 }
 class MMPlus_Walker extends Walker_Nav_Menu
 {

@@ -1,6 +1,6 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // disable direct access
+    exit; // disable direct access.
 }
     $selected_nav =  ! empty( $_REQUEST['menu'] ) ? (int) $_REQUEST['menu'] : 0;
     if ( ! $selected_nav){
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 $mmth_nav_location_settings = get_mmplus_option( $current_location );
 			?>
             <div class="mmplus-menu-meta-box-wrapper">
-                <p><?php _e( $location_name, 'megamenu-plus' ); ?></p>
+                <p><?php _e( $location_name, 'mmplus' ); ?></p>
                             
                 <div class="mmplus-menu-meta-box-data">
                     
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
             <div class="mmth-notice-warning">
                 <p>
-					<?php _e( 'This menu is not in any location, please set a location first', 'megamenu-plus' ); ?>
+					<?php _e( 'This menu is not in any location, please set a location first', 'mmplus' ); ?>
                 </p>
             </div>
 	</div>	

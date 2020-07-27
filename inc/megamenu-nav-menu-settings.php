@@ -1,6 +1,6 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // disable direct access
+    exit; // disable direct access.
 }
 class MMPlus_Nav_Menu_Settings {
 	
@@ -10,10 +10,10 @@ class MMPlus_Nav_Menu_Settings {
     }
 
 	public function mmplus_add_metabox_to_nav_menu_settings() {
-        add_meta_box( 'mmplus-nav-menu-metabox-set', __( 'Megamenu Plus Setting', 'megamenu-plus'), array( $this, 'mmplus_mmplus_themes_meta_box' ), 'nav-menus', 'side', 'high' );
+        add_meta_box( 'mmplus-nav-menu-metabox-set', __( 'Megamenu Plus Setting', 'mmplus'), array( $this, 'mmplus_themes_meta_box' ), 'nav-menus', 'side', 'high' );
     }
 
-    public function mmplus_mmplus_themes_meta_box( ){ 
+    public function mmplus_themes_meta_box( ){ 
         include_once( MMPLUS_DIR . 'inc/megamenu-nav-menu-metadata.php' );
     }
 
@@ -61,7 +61,7 @@ class MMPlus_Nav_Menu_Settings {
             $mmth_updated_option = get_option( 'mmplus_options' );
 
             
-        wp_send_json_success( array( 'msg' => __( 'Settings saved.', 'megamenu-plus'), 
+        wp_send_json_success( array( 'msg' => __( 'Settings saved.', 'mmplus'), 
             'setting_data' => $mmth_settings_array,
             'mmth_updated_option' => $mmth_updated_option ) 
     );
