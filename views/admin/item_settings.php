@@ -15,7 +15,7 @@ define('MMPLUS_ALIGN_LEFT', MMPLUS_URL . 'assets/images/left-align.png');
 define('MMPLUS_ALIGN_CENTER', MMPLUS_URL . 'assets/images/center-align.png');
 define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 ?>
- <div class="mmth-item-settings-top-bar">
+ <div class="mmth-item-settings-top-bar"> 
  	<div class="mmth-item-settings-title">
         <span class="mmplus-item-settings-heading"></span>
     </div>

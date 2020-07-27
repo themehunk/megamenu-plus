@@ -1,6 +1,6 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // disable direct access
+    exit; // disable direct access.
 }
     $selected_nav =  ! empty( $_REQUEST['menu'] ) ? (int) $_REQUEST['menu'] : 0;
     if ( ! $selected_nav){

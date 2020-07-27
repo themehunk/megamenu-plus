@@ -1,12 +1,12 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // disable direct access
+    exit; // disable direct access.
 }
 /**
  * 
  */
 if ( ! class_exists('MMPLUS_Base')) {
-
+ 
 	class MMPLUS_Base {
 		
 		/**

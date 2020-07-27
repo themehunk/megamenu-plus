@@ -1,6 +1,6 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // disable direct access
+    exit; // disable direct access.
 }
 if ( ! function_exists('mmplus_get_attached_location_with_menu')){
 	function mmplus_get_attached_location_with_menu( $menu_id = 0 ) {
