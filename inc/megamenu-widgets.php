@@ -38,8 +38,8 @@ if ( ! class_exists('MMPlus_Widgets')) {
             register_sidebar(
                 array(
                     'id' => 'mmth',
-                    'name' => __("Megamenu Plus Widgets", "megamenu-plus"),
-                    'description'   => __("All the widgets added to submenus using Megamenu Plus builder are stored here.", "megamenu-plus")
+                    'name' => __("Megamenu Plus Widgets", "mmplus"),
+                    'description'   => __("All the widgets added to submenus using Megamenu Plus builder are stored here.", "mmplus")
                 )
             );
         }
@@ -177,8 +177,8 @@ if ( ! class_exists('MMPlus_Widgets')) {
                             ?>
 
                             <div class='widget-controls'>
-                                <a class='delete' href='#delete'><?php _e('Delete', 'megamenu-plus'); ?></a> |
-                                <a class='close' href='#close'><?php _e('Close', 'megamenu-plus'); ?></a>
+                                <a class='delete' href='#delete'><?php _e('Delete', 'mmplus'); ?></a> |
+                                <a class='close' href='#close'><?php _e('Close', 'mmplus'); ?></a>
                             </div>
 
                             <?php
@@ -223,7 +223,7 @@ if ( ! class_exists('MMPlus_Widgets')) {
                 call_user_func_array( $control['callback'], $control['params'] );
                 return true;
             }
-            wp_send_json_success( ['msg' => __('Widget saved success', 'megamenu-plus'), 'id_base' => $id_base ] );
+            wp_send_json_success( ['msg' => __('Widget saved success', 'mmplus'), 'id_base' => $id_base ] );
         }
 
 	   /**
@@ -310,7 +310,7 @@ if ( ! class_exists('MMPlus_Widgets')) {
 
                     //remove empty key from array
                     $update = update_post_meta($menu_item_id, 'mmplus_layout', $get_layout );
-                    wp_send_json_success( __('Widget item column moved', 'megamenu-plus') );
+                    wp_send_json_success( __('Widget item column moved', 'mmplus') );
                 }
             }else{
                 //Else sorting it within own col
@@ -326,7 +326,7 @@ if ( ! class_exists('MMPlus_Widgets')) {
                         }
                         $get_layout['layout'][$row_id]['row'][$col_id]['items'] = $sorted_item;
                         $update = update_post_meta($menu_item_id, 'mmplus_layout', $get_layout );
-                        wp_send_json_success( __('Widget item column update', 'megamenu-plus') );
+                        wp_send_json_success( __('Widget item column update', 'mmplus') );
                     }
                 }
             }
@@ -345,7 +345,7 @@ if ( ! class_exists('MMPlus_Widgets')) {
                 unset($get_layout['layout'][$row_id]);
             }
             update_post_meta($menu_item_id, 'mmplus_layout', $get_layout );
-            wp_send_json_success( __('Row has been deleted', 'megamenu-plus') );
+            wp_send_json_success( __('Row has been deleted', 'mmplus') );
         }
 
 
@@ -368,7 +368,7 @@ if ( ! class_exists('MMPlus_Widgets')) {
 
             $updated_data = get_post_meta($menu_item_id, 'mmplus_layout', $get_layout );
 
-            wp_send_json_success( [ 'msg' => __('Column has been deleted.', 'megamenu-plus') ] );
+            wp_send_json_success( [ 'msg' => __('Column has been deleted.', 'mmplus') ] );
         }
 
         /**
@@ -392,7 +392,7 @@ if ( ! class_exists('MMPlus_Widgets')) {
             $get_layout['layout'] = $sorted_items;
             update_post_meta( $menu_item_id, 'mmplus_layout', $get_layout );
             $updated_row_data = get_post_meta($menu_item_id, 'mmplus_layout' );
-            wp_send_json_success( ['msg' => __('Row updated', 'megamenu-plus'), 
+            wp_send_json_success( ['msg' => __('Row updated', 'mmplus'), 
                                     'get_layout' => $get_layout,
                                     'rows_order' => $rows_order,
                                     'new_order' => $new_order,
@@ -424,7 +424,7 @@ if ( ! class_exists('MMPlus_Widgets')) {
             $update = update_post_meta($menu_item_id, 'mmplus_layout', $get_layout );
             $updated_col_data = get_post_meta($menu_item_id, 'mmplus_layout' );
             wp_send_json_success( [
-                                    'msg' => __('Column updated', 'megamenu-plus'), 
+                                    'msg' => __('Column updated', 'mmplus'), 
                                     'get_layout' => $get_layout,
                                     'col_order' => $col_order,
                                     'new_order' => $new_order,
@@ -470,7 +470,7 @@ if ( ! class_exists('MMPlus_Widgets')) {
 
             $updated_data = get_post_meta($menu_item_id, 'mmplus_layout');
 
-            wp_send_json_success( array('message' => __('Widget added', 'megamenu-plus') ) );
+            wp_send_json_success( array('message' => __('Widget added', 'mmplus') ) );
         }
 
         

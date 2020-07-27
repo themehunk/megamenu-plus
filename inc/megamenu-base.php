@@ -80,8 +80,8 @@ if ( ! class_exists('MMPLUS_Base')) {
 	        	array( 
 	        		'ajax_url' => admin_url('admin-ajax.php'), 
 	        		'mmplus_nonce'    => wp_create_nonce('mmplus_check_security'),
-	        		'no_column_space_error' => __( 'There is not enough space in this row to add a new column.', 'megemenu-mmplus' ), 
-	        		'mmth_begin_text' => __( 'Mega Menu TH', 'megemenu-mmplus' )
+	        		'no_column_space_error' => __( 'There is not enough space in this row to add a new column.', 'mmplus' ), 
+	        		'mmth_begin_text' => __( 'Mega Menu TH', 'mmplus' )
 	        	) 
 	        );
 		}

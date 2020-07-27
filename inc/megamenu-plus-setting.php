@@ -55,7 +55,7 @@ class MMPlus_Menu_Settings {
 
         $icon = 'dashicons-tagcloud';
 
-        $page = add_menu_page( __('Megamenu Plus', 'megamenu-plus'), __('Megamenu Plus', 'megamenu-plus'), 'edit_theme_options', 'megamenuplus', array($this, 'page'), $icon );
+        $page = add_menu_page( __('Megamenu Plus', 'mmplus'), __('Megamenu Plus', 'mmplus'), 'edit_theme_options', 'megamenuplus', array($this, 'page'), $icon );
 
 
        
@@ -92,12 +92,12 @@ class MMPlus_Menu_Settings {
                }
               wp_localize_script( 'mega-menu-theme-editor', 'mmplus_options',
               array(
-                'confirm' => __("Are you sure?", "megamenu-plus"),
-                "theme_save_error" => __("Error saving theme.", "megamenu-plus"),
-                "theme_save_error_refresh" => __("Please try refreshing the page.", "megamenu-plus"),
-                "theme_save_error_exhausted" => __("The server ran out of memory whilst trying to regenerate the menu CSS.", "megamenu-plus"),
-                "theme_save_error_memory_limit" => __("Try disabling unusued plugins to increase the available memory. Alternatively, for details on how to increase your server memory limit see:", "megamenu-plus"),
-                "theme_save_error_500" => __("The server returned a 500 error. The server did not provide an error message (you should find details of the error in your server error log), but this is usually due to your server memory limit being reached.", "megamenu-plus"),
+                'confirm' => __("Are you sure?", "mmplus"),
+                "theme_save_error" => __("Error saving theme.", "mmplus"),
+                "theme_save_error_refresh" => __("Please try refreshing the page.", "mmplus"),
+                "theme_save_error_exhausted" => __("The server ran out of memory whilst trying to regenerate the menu CSS.", "mmplus"),
+                "theme_save_error_memory_limit" => __("Try disabling unusued plugins to increase the available memory. Alternatively, for details on how to increase your server memory limit see:", "mmplus"),
+                "theme_save_error_500" => __("The server returned a 500 error. The server did not provide an error message (you should find details of the error in your server error log), but this is usually due to your server memory limit being reached.", "mmplus"),
                 "increase_memory_limit_url" => "http://www.wpbeginner.com/wp-tutorials/fix-wordpress-memory-exhausted-error-increase-php-memory/",
                 "increase_memory_limit_anchor_text" => "How to increase the WordPress memory limit"
             )
@@ -278,7 +278,7 @@ class MMPlus_Menu_Settings {
         $versions = apply_filters( "mmplus_versions", array(
             'core' => array(
                 'version' => MMPLUS_VERSION,
-                'text' => __("Core version", "megamenu-plus")
+                'text' => __("Core version", "mmplus")
             ),
             
         ) );
@@ -288,7 +288,7 @@ class MMPlus_Menu_Settings {
         <div class='megamenu_outer_wrap'>
              <div class='megamenu_header'>
                 <div class='megamenu_header_left'>
-                    <h2><?php _e("Megamenu Plus", "megamenu-plus"); ?></h2>
+                    <h2><?php _e("Megamenu Plus", "mmplus"); ?></h2>
                     <div class='version'>
                         <?php
 
@@ -346,11 +346,11 @@ class MMPlus_Menu_Settings {
                                 $settings = apply_filters( 'megamenu_theme_editor_settings', array(
                                                
                                                'menu_bar' => array(
-                                                    'title' => __( "Menu Bar", "megamenu-plus" ),
+                                                    'title' => __( "Menu Bar", "mmplus" ),
                                                     'settings' => array(
                                                             'menu_item_height' => array(
                                                             'priority' => 05,
-                                                            'title' => __( "Menu Height", "megamenu-plus" ),
+                                                            'title' => __( "Menu Height", "mmplus" ),
                                                             'description' =>'',
                                                             'settings' => array(
                                                                 array(
@@ -364,7 +364,7 @@ class MMPlus_Menu_Settings {
 
                                                             'menu_item_align' => array(
                                                             'priority' => 05,
-                                                            'title' => __( "Menu Items Align", "megamenu-plus" ),
+                                                            'title' => __( "Menu Items Align", "mmplus" ),
                                                             'description' => '',
                                                             
                                                             'settings' => array(
@@ -377,11 +377,11 @@ class MMPlus_Menu_Settings {
                                                            ),
                                                              'menu_background' => array(
                                                                 'priority' => 10,
-                                                                'title' => __( "Menu Background", "megamenu-plus" ),
+                                                                'title' => __( "Menu Background", "mmplus" ),
                                                                 'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Color", "megamenu-plus" ),
+                                                                        'title' => __( "Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'menu_bg_color'
                                                                     ),
@@ -390,16 +390,16 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                               'menu_link_color' => array(
                                                                 'priority' => 10,
-                                                                'title' => __( "Menu Link Color", "megamenu-plus" ),
+                                                                'title' => __( "Menu Link Color", "mmplus" ),
                                                                  'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Color", "megamenu-plus" ),
+                                                                        'title' => __( "Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'menu_link_color'
                                                                     ),
                                                                     array(
-                                                                        'title' => __( "Hover Color / Current Item", "megamenu-plus" ),
+                                                                        'title' => __( "Hover Color / Current Item", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'menu_hvr_color'
                                                                     ),
@@ -408,16 +408,16 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                               'menu_link_bg_color' => array(
                                                                 'priority' => 10,
-                                                                'title' => __( "Menu Link Bg Color", "megamenu-plus" ),
+                                                                'title' => __( "Menu Link Bg Color", "mmplus" ),
                                                                 'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Bg Color", "megamenu-plus" ),
+                                                                        'title' => __( "Bg Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'menu_link_bg_color'
                                                                     ),
                                                                     array(
-                                                                        'title' => __( "Bg Hover Color / Bg Current Item Color", "megamenu-plus" ),
+                                                                        'title' => __( "Bg Hover Color / Bg Current Item Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'menu_link_hvr_bg_color'
                                                                     ),
@@ -426,16 +426,16 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                                  'menu-dropdown-arrow' => array(
                                                                     'priority' => 10,
-                                                                    'title' => __( "Arrow", "megamenu-plus" ),
-                                                                    'description' => __( "Select the arrow styles.", "megamenu-plus" ),
+                                                                    'title' => __( "Arrow", "mmplus" ),
+                                                                    'description' => __( "Select the arrow styles.", "mmplus" ),
                                                                     'settings' => array(
                                                                         array(
-                                                                            'title' => __( "Menu", "megamenu-plus" ),
+                                                                            'title' => __( "Menu", "mmplus" ),
                                                                             'type' => 'arrow',
                                                                             'key' => 'menu-dropdown-arrow'
                                                                         ),
                                                                         array(
-                                                                            'title' => __( "Submenu ", "megamenu-plus" ),
+                                                                            'title' => __( "Submenu ", "mmplus" ),
                                                                             'type' => 'arrow',
                                                                             'key' => 'sub-menu-dropdown-arrow'
                                                                         ),
@@ -445,17 +445,17 @@ class MMPlus_Menu_Settings {
 
                                                                 'sub_menu_items' => array(
                                                                 'priority' => 11,
-                                                                'title' => __( "Sub Menu Item", "megamenu-plus" ),
+                                                                'title' => __( "Sub Menu Item", "mmplus" ),
                                                                 'description' => '',
                                                             ),
 
                                                              'sub_menu_background' => array(
                                                                 'priority' => 12,
-                                                                'title' => __( "Menu Background", "megamenu-plus" ),
+                                                                'title' => __( "Menu Background", "mmplus" ),
                                                                 'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Color", "megamenu-plus" ),
+                                                                        'title' => __( "Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'sub_menu_bg_color'
                                                                     ),
@@ -464,12 +464,12 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                              'sub_menu_link_bg_color' => array(
                                                                 'priority' => 12,
-                                                                'title' => __( "Menu Link Bg Color", "megamenu-plus" ),
+                                                                'title' => __( "Menu Link Bg Color", "mmplus" ),
                                                                 'description' =>'',
                                                                 'settings' => array(
                                                                     
                                                                     array(
-                                                                        'title' => __( "Bg Hover Color / Bg Current Item Color", "megamenu-plus" ),
+                                                                        'title' => __( "Bg Hover Color / Bg Current Item Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'sub_menu_hvr_bg_color'
                                                                     ),
@@ -478,16 +478,16 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                               'sub_menu_link_color' => array(
                                                                 'priority' => 12,
-                                                                'title' => __( "Menu Link Color", "megamenu-plus" ),
+                                                                'title' => __( "Menu Link Color", "mmplus" ),
                                                                  'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Color", "megamenu-plus" ),
+                                                                        'title' => __( "Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'sub_menu_link_color'
                                                                     ),
                                                                     array(
-                                                                        'title' => __( "Hover Color / Current Item", "megamenu-plus" ),
+                                                                        'title' => __( "Hover Color / Current Item", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'sub_menu_hvr_color'
                                                                     ),
@@ -499,32 +499,32 @@ class MMPlus_Menu_Settings {
 
                                                             'mobile_menu_padding' => array(
                                                             'priority' => 13,
-                                                            'title' => __( "Menu Padding", "megamenu-plus" ),
+                                                            'title' => __( "Menu Padding", "mmplus" ),
                                                             'description' =>'',
                                                             'settings' => array(
                                                                 array(
-                                                                    'title' => __( "Top (px)", "megamenu-plus" ),
+                                                                    'title' => __( "Top (px)", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_padding_top',
                                                                     'validation'=>'int'
                                                                     
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Right (px)", "megamenu-plus" ),
+                                                                    'title' => __( "Right (px)", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_padding_right',
                                                                     'validation'=>'int'
                                                                   
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Bottom (px)", "megamenu-plus" ),
+                                                                    'title' => __( "Bottom (px)", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_padding_bottom',
                                                                     'validation'=>'int'
                                                                    
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Left (px)", "megamenu-plus" ),
+                                                                    'title' => __( "Left (px)", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_padding_left',
                                                                     'validation'=>'int'
@@ -534,18 +534,18 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                             'menu_margin' => array(
                                                             'priority' => 13,
-                                                            'title' => __( "Menu Margin (px)", "megamenu-plus" ),
+                                                            'title' => __( "Menu Margin (px)", "mmplus" ),
                                                             'description' =>'',
                                                             'settings' => array(
                                                                 array(
-                                                                    'title' => __( "Left (px)", "megamenu-plus" ),
+                                                                    'title' => __( "Left (px)", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_margin_left',
                                                                     'validation'=>'int'
                                                                     
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Right (px)", "megamenu-plus" ),
+                                                                    'title' => __( "Right (px)", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_margin_right',
                                                                     'validation'=>'int'
@@ -557,32 +557,32 @@ class MMPlus_Menu_Settings {
 
                                                             'menu_border_radius' => array(
                                                             'priority' => 14,
-                                                            'title' => __( "Menu Border Radius", "megamenu-plus" ),
-                                                            'description' => __( "Set a border radius on the main menu bar.", "megamenu-plus" ),
+                                                            'title' => __( "Menu Border Radius", "mmplus" ),
+                                                            'description' => __( "Set a border radius on the main menu bar.", "mmplus" ),
                                                             'settings' => array(
                                                                 array(
-                                                                    'title' => __( "Top Left (px)", "megamenu-plusu" ),
+                                                                    'title' => __( "Top Left (px)", "mmplusu" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_border_radius_top_left',
                                                                     'validation'=>'int'
                                                                    
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Top Right (px)", "megamenu-plus" ),
+                                                                    'title' => __( "Top Right (px)", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_border_radius_top_right',
                                                                     'validation'=>'int'
                                                                   
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Bottom Right (px)", "megamenu-plus" ),
+                                                                    'title' => __( "Bottom Right (px)", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_border_radius_bottom_right',
                                                                     'validation'=>'int'
                                                                    
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Bottom Left (px)", "megamenu-plus" ),
+                                                                    'title' => __( "Bottom Left (px)", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'menu_border_radius_bottom_left',
                                                                     'validation'=>'int'
@@ -595,11 +595,11 @@ class MMPlus_Menu_Settings {
                                                     ),
                                                ),
                                                'mobile_menu' => array(
-                                                    'title' => __( "Mobile Menu", "megamenu-plus" ),
+                                                    'title' => __( "Mobile Menu", "mmplus" ),
                                                     'settings' => array(
                                                             'responsive_breakpoint' => array(
                                                             'priority' => 10,
-                                                            'title' => __( "Responsive Breakpoint", "megamenu-plus" ),
+                                                            'title' => __( "Responsive Breakpoint", "mmplus" ),
                                                             'description' => '',
                                                             'settings' => array(
                                                                 array(
@@ -612,7 +612,7 @@ class MMPlus_Menu_Settings {
                                                         ),
                                                             'mobile_menu_item_align' => array(
                                                             'priority' => 10,
-                                                            'title' => __( "Panel Open", "megamenu-plus" ),
+                                                            'title' => __( "Panel Open", "mmplus" ),
                                                             'description' => '',
                                                             
                                                             'settings' => array(
@@ -625,17 +625,17 @@ class MMPlus_Menu_Settings {
                                                            ),
                                                             'toggle_text' => array(
                                                             'priority' => 10,
-                                                            'title' => __( "Toggle Text", "megamenu-plus" ),
+                                                            'title' => __( "Toggle Text", "mmplus" ),
                                                             'description' => '',
                                                             'settings' => array(
                                                                 array(
-                                                                    'title' => __( "Text", "megamenu-plus" ),
+                                                                    'title' => __( "Text", "mmplus" ),
                                                                     'type' => 'freetext',
                                                                     'key' => 'toggle_text',
                                                                     
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Color", "megamenu-plus" ),
+                                                                    'title' => __( "Color", "mmplus" ),
                                                                     'type' => 'color',
                                                                     'key' => 'toggle_text_clr',
                                                                     
@@ -644,11 +644,11 @@ class MMPlus_Menu_Settings {
                                                         ),
                                                             'toggle_bg' => array(
                                                             'priority' => 10,
-                                                            'title' => __( "Toggle Background", "megamenu-plus" ),
+                                                            'title' => __( "Toggle Background", "mmplus" ),
                                                             'description' => '',
                                                             'settings' => array(
                                                                 array(
-                                                                        'title' => __( "Bg Color", "megamenu-plus" ),
+                                                                        'title' => __( "Bg Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'toggle_bg_color'
                                                                     ),
@@ -656,21 +656,21 @@ class MMPlus_Menu_Settings {
                                                         ),
                                                             'toggle_icon_clr' => array(
                                                             'priority' => 10,
-                                                            'title' => __( "Toggle", "megamenu-plus" ),
+                                                            'title' => __( "Toggle", "mmplus" ),
                                                             'description' => '',
                                                             'settings' => array(
                                                                 array(
-                                                                        'title' => __( "Icon Color", "megamenu-plus" ),
+                                                                        'title' => __( "Icon Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'toggle_icon_clr'
                                                                     ),
                                                                 array(
-                                                                        'title' => __( "Open Icon", "megamenu-plus" ),
+                                                                        'title' => __( "Open Icon", "mmplus" ),
                                                                         'type' => 'toggleicon',
                                                                         'key' => 'mobile-open-toggle-icon'
                                                                     ),
                                                                 array(
-                                                                        'title' => __( "Close Icon","megamenu-plus" ),
+                                                                        'title' => __( "Close Icon","mmplus" ),
                                                                         'type' => 'toggleicon',
                                                                         'key' => 'mobile-close-toggle-icon'
                                                                     ),
@@ -679,7 +679,7 @@ class MMPlus_Menu_Settings {
 
                                                     'toggle_bar_height' => array(
                                                     'priority' => 10,
-                                                    'title' => __( "Toggle Bar Height", "megamenu-plus" ),
+                                                    'title' => __( "Toggle Bar Height", "mmplus" ),
                                                     'description' => '',
                                                     'settings' => array(
                                                         array(
@@ -693,16 +693,16 @@ class MMPlus_Menu_Settings {
                                                 ),
                                                     'mobile-menu-dropdown-arrow' => array(
                                                                     'priority' => 10,
-                                                                    'title' => __( "Arrow", "megamenu-plus" ),
-                                                                    'description' => __( "Select the arrow styles.", "megamenu-plus" ),
+                                                                    'title' => __( "Arrow", "mmplus" ),
+                                                                    'description' => __( "Select the arrow styles.", "mmplus" ),
                                                                     'settings' => array(
                                                                         array(
-                                                                            'title' => __( "Down", "megamenu-plus" ),
+                                                                            'title' => __( "Down", "mmplus" ),
                                                                             'type' => 'arrow',
                                                                             'key' => 'mobile-menu-dropdown-arrow'
                                                                         ),
                                                                         array(
-                                                                            'title' => __( "Up", "megamenu-plus" ),
+                                                                            'title' => __( "Up", "mmplus" ),
                                                                             'type' => 'arrow',
                                                                             'key' => 'mobile-sub-menu-dropdown-arrow'
                                                                         ),
@@ -711,11 +711,11 @@ class MMPlus_Menu_Settings {
                                                                 ),
                                                      'mobile_menu_bg' => array(
                                                             'priority' => 10,
-                                                            'title' => __( "Mobile Menu Background", "megamenu-plus" ),
+                                                            'title' => __( "Mobile Menu Background", "mmplus" ),
                                                             'description' => '',
                                                             'settings' => array(
                                                                 array(
-                                                                        'title' => __( "Bg Color", "megamenu-plus" ),
+                                                                        'title' => __( "Bg Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'mobile_menu_bg_color'
                                                                     ),
@@ -723,16 +723,16 @@ class MMPlus_Menu_Settings {
                                                         ),
                                                        'mobile_menu_link_bg_color' => array(
                                                                 'priority' => 10,
-                                                                'title' => __( "Menu Link Bg Color", "megamenu-plus" ),
+                                                                'title' => __( "Menu Link Bg Color", "mmplus" ),
                                                                 'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Bg Color", "megamenu-plus" ),
+                                                                        'title' => __( "Bg Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'mobile_menu_link_bg_color'
                                                                     ),
                                                                     array(
-                                                                        'title' => __( "Bg hover color / Bg Current Item Color", "megamenu-plus" ),
+                                                                        'title' => __( "Bg hover color / Bg Current Item Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'mobile_menu_hvr_bg_color'
                                                                     ),
@@ -741,16 +741,16 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                        'mobile_menu_link_color' => array(
                                                                 'priority' => 10,
-                                                                'title' => __( "Menu Link Color", "megamenu-plus" ),
+                                                                'title' => __( "Menu Link Color", "mmplus" ),
                                                                 'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Color", "megamenu-plus" ),
+                                                                        'title' => __( "Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'mobile_menu_link_color'
                                                                     ),
                                                                     array(
-                                                                        'title' => __( "Hover Color / Current Item Color", "megamenu-plus" ),
+                                                                        'title' => __( "Hover Color / Current Item Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'mobile_menu_hvr_link_color'
                                                                     ),
@@ -759,16 +759,16 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                           'mobile_sub_menu_items' => array(
                                                                 'priority' => 11,
-                                                                'title' => __( "Sub Menu Item", "megamenu-plus" ),
+                                                                'title' => __( "Sub Menu Item", "mmplus" ),
                                                                 'description' => '',
                                                             ),
                                                             'mobile_sub_menu_hide' => array(
                                                                 'priority' => 12,
-                                                                'title' => __( "Sub Menu Hide", "megamenu-plus" ),
+                                                                'title' => __( "Sub Menu Hide", "mmplus" ),
                                                                 'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Hide Sub Menu On Mobile", "megamenu-plus" ),
+                                                                        'title' => __( "Hide Sub Menu On Mobile", "mmplus" ),
                                                                         'type' => 'checkbox',
                                                                         'key' => 'mobile_sub_menu_hide'
                                                                     ),
@@ -777,16 +777,16 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                            'mobile_sub_menu_bg_link_color' => array(
                                                                 'priority' => 12,
-                                                                'title' => __( "Menu Link Bg Color", "megamenu-plus" ),
+                                                                'title' => __( "Menu Link Bg Color", "mmplus" ),
                                                                 'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Bg Color", "megamenu-plus" ),
+                                                                        'title' => __( "Bg Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'mobile_sub_menu_bg_link_color'
                                                                     ),
                                                                     array(
-                                                                        'title' => __( "Bg Hover Color / Current Item Color", "megamenu-plus" ),
+                                                                        'title' => __( "Bg Hover Color / Current Item Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'mobile_sub_menu_bg_link_hvr_color'
                                                                     ),
@@ -795,16 +795,16 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                            'mobile_sub_menu_link_color' => array(
                                                                 'priority' => 12,
-                                                                'title' => __( "Menu Link Color", "megamenu-plus" ),
+                                                                'title' => __( "Menu Link Color", "mmplus" ),
                                                                 'description' =>'',
                                                                 'settings' => array(
                                                                     array(
-                                                                        'title' => __( "Color", "megamenu-plus" ),
+                                                                        'title' => __( "Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'mobile_sub_menu_link_color'
                                                                     ),
                                                                     array(
-                                                                        'title' => __( "Hover Color / Current Item Color", "megamenu-plus" ),
+                                                                        'title' => __( "Hover Color / Current Item Color", "mmplus" ),
                                                                         'type' => 'color',
                                                                         'key' => 'mobile_sub_menu_link_hvr_color'
                                                                     ),
@@ -816,16 +816,16 @@ class MMPlus_Menu_Settings {
                                             ),
                                      ),
                         'custom_styling' => array(
-                            'title' => __( "Custom Styling", "megamenu-plus"),
+                            'title' => __( "Custom Styling", "mmplus"),
                             'settings' => array(
                                 'custom_styling' => array(
                                     'priority' => 40,
-                                    'title' => __( "CSS Editor", "megamenu-plus" ),
-                                    'description' => __( "Define any custom CSS you wish to add to menus using this theme. You can use standard CSS", "megamenu-plus"),
+                                    'title' => __( "CSS Editor", "mmplus" ),
+                                    'description' => __( "Define any custom CSS you wish to add to menus using this theme. You can use standard CSS", "mmplus"),
                                     'settings' => array(
                                         array(
-                                            'title' =>  __( "CSS Editor", "megamenu-plus" ),
-                                            'description' => __( "Define any custom CSS you wish to add to menus using this theme. You can use standard CSS", "megamenu-plus"),
+                                            'title' =>  __( "CSS Editor", "mmplus" ),
+                                            'description' => __( "Define any custom CSS you wish to add to menus using this theme. You can use standard CSS", "mmplus"),
                                             'type' => 'textarea',
                                             'key' => 'custom_css'
                                         )
@@ -990,7 +990,7 @@ class MMPlus_Menu_Settings {
                         <?php submit_button(); ?><span class='spinner'></span>
                     </div>
                     <div class='mega_right'>
-                            <a class='reset confirm' href='<?php echo $reset_url; ?>'><?php _e("Reset Option", "megamenu-plus"); ?></a>
+                            <a class='reset confirm' href='<?php echo $reset_url; ?>'><?php _e("Reset Option", "mmplus"); ?></a>
                     </div>
                 </div>
                    <?php $this->mmplus_show_cache_warning(); ?>
@@ -1014,9 +1014,9 @@ class MMPlus_Menu_Settings {
 
         <div>
 
-            <h3><?php _e("Changes not showing up?", "megamenu-plus"); ?></h3>
+            <h3><?php _e("Changes not showing up?", "mmplus"); ?></h3>
 
-            <p><?php echo _n("We have detected the following plugin that may prevent changes made within the theme editor from being applied to the menu.", "We have detected the following plugins that may prevent changes made within the theme editor from being applied to the menu.", count( $active_plugins), "megamenu-plus"); ?></p>
+            <p><?php echo _n("We have detected the following plugin that may prevent changes made within the theme editor from being applied to the menu.", "We have detected the following plugins that may prevent changes made within the theme editor from being applied to the menu.", count( $active_plugins), "mmplus"); ?></p>
 
             <ul class='ul-disc'>
                 <?php
@@ -1026,7 +1026,7 @@ class MMPlus_Menu_Settings {
                 ?>
             </ul>
 
-            <p><?php echo _n("Try clearing the cache of the above plugin if your changes are not being applied to the menu.", "Try clearing the caches of the above plugins if your changes are not being applied to the menu.", count( $active_plugins), "megamenu-plus"); ?></p>
+            <p><?php echo _n("Try clearing the cache of the above plugin if your changes are not being applied to the menu.", "Try clearing the caches of the above plugins if your changes are not being applied to the menu.", count( $active_plugins), "mmplus"); ?></p>
 
         </div>
 
@@ -1106,9 +1106,9 @@ class MMPlus_Menu_Settings {
         ?>
 
             <select name='settings[<?php echo $key ?>]'>
-                <option value='left' <?php selected( $value, 'left' ); ?>><?php _e("Left", "megamenu-plus") ?></option>
-                <option value='center' <?php selected( $value, 'center' ); ?>><?php _e("Center", "megamenu-plus") ?></option>
-                <option value='right' <?php selected( $value, 'right' ); ?>><?php _e("Right", "megamenu-plus") ?></option>
+                <option value='left' <?php selected( $value, 'left' ); ?>><?php _e("Left", "mmplus") ?></option>
+                <option value='center' <?php selected( $value, 'center' ); ?>><?php _e("Center", "mmplus") ?></option>
+                <option value='right' <?php selected( $value, 'right' ); ?>><?php _e("Right", "mmplus") ?></option>
             </select>
 
         <?php
@@ -1194,7 +1194,7 @@ class MMPlus_Menu_Settings {
             <select class='icon_dropdown' name='settings[<?php echo $key ?>]'>
                 <?php
 
-                    echo "<option value='disabled'>" . __("Disabled", "megamenu-plus") . "</option>";
+                    echo "<option value='disabled'>" . __("Disabled", "mmplus") . "</option>";
                     foreach ($mmplus_arrow_icons as $code => $class) {
                         $name = str_replace('dashicons-', '', $class);
                         $name = ucwords(str_replace(array('-','arrow'), ' ', $name));
@@ -1247,7 +1247,7 @@ class MMPlus_Menu_Settings {
             <select class='icon_dropdown' name='settings[<?php echo $key ?>]'>
                 <?php
 
-                    echo "<option value='disabled'>" . __("Disabled", "megamenu-plus") . "</option>";
+                    echo "<option value='disabled'>" . __("Disabled", "mmplus") . "</option>";
                     foreach ($mmplus_toggle_icons as $code => $class) {
                         $name = str_replace('dashicons-', '', $class);
                         $name = ucwords(str_replace(array('-','icon'), ' ', $name));

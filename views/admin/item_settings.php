@@ -21,12 +21,12 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
     </div>
     <?php if ( $menu_item_depth == 0 ) { ?>
     <span class="mmplus-megamenu-status">
-    	<label for='mmplus-megamenu-status-chkbox' class="mmplus-megamenu-status-text <?php echo esc_attr($mmplus_item_megamenu_status); ?>"><?php _e('Activate MegaMenu', 'megamenu-plus') ?>
+    	<label for='mmplus-megamenu-status-chkbox' class="mmplus-megamenu-status-text <?php echo esc_attr($mmplus_item_megamenu_status); ?>"><?php _e('Activate MegaMenu', 'mmplus') ?>
     	<input type="checkbox" id="mmplus-megamenu-status-chkbox" <?php checked( $mmplus_item_megamenu_status, 'active' ); ?> >
     	</label>
     </span>
 	<?php } ?>
-	<a href="javascript:;" id="mmth-saving-indicator" style="display: none;"><?php _e('Saving...', 'megamenu-plus'); ?></a>
+	<a href="javascript:;" id="mmth-saving-indicator" style="display: none;"><?php _e('Saving...', 'mmplus'); ?></a>
  	<a href="javascript:;" class="mmplus-builder-close-btn">
  		<span class="dashicons dashicons-no-alt"></span>
  	</a>
@@ -36,7 +36,7 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
  	<div class="mmth-builder-settings-wrapper"> 	
  		<div class="mmplus-draggable-widgets-wrapper">
  			<div class=" mmth-builder-settings  mmplus-draggable-widgets-list-title active">
- 				<i class="dashicons dashicons-editor-kitchensink"></i>   <?php _e('Widgets', 'megamenu-plus'); ?>
+ 				<i class="dashicons dashicons-editor-kitchensink"></i>   <?php _e('Widgets', 'mmplus'); ?>
  			</div>	                          
 		    <div class="mmplus-draggable-widgets-list">
 		    	<?php
@@ -47,7 +47,7 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 		                	. $value['name'] . 
 		                	'</span>'.
 		                	' <span class="widgets-drag-btn"><i class="fa fa-arrows"></i>'
-		                	.__('Drag', 'megamenu-plus').'</span>
+		                	.__('Drag', 'mmplus').'</span>
 		                	</div>';
 		            }
 		        }
@@ -55,10 +55,10 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 		    </div>
 		</div>    
 	    <div class="mmth-builder-settings mmplus-builder-config-options">
-	    	<i class="dashicons dashicons-admin-generic"></i> <?php _e('Options', 'megamenu-plus'); ?>
+	    	<i class="dashicons dashicons-admin-generic"></i> <?php _e('Options', 'mmplus'); ?>
 	    </div>	    
 	    <div class="mmth-builder-settings mmplus-builder-megamenu-icons">
-	    	<i class="dashicons dashicons-format-gallery"></i> <?php _e('Icons', 'megamenu-plus'); ?>
+	    	<i class="dashicons dashicons-format-gallery"></i> <?php _e('Icons', 'mmplus'); ?>
 	    </div>
  	</div>
  	<div class="mmplus-builder-content-wrapper">
@@ -140,11 +140,11 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 						<table>
 						  <tr>
 						    <td class="mmth-name">
-						    	<?php _e('Panel', 'megamenu-plus') ?>
+						    	<?php _e('Panel', 'mmplus') ?>
 						    </td>
 						    <td class="mmth-sett-optn">
 						    	<input type="hidden" name="menu_item_id" value="<?php echo $menu_item_id; ?>">
-						    	<span class="mega-short-desc"><?php  _e('Width (px, %, em)', 'megamenu-plus');?></span>
+						    	<span class="mega-short-desc"><?php  _e('Width (px, %, em)', 'mmplus');?></span>
 						    	<input type="text" name="mmplus_width" value="<?php echo isset( ( $mmth_builder_option['mmplus_width'] ) ) ? $mmth_builder_option['mmplus_width'] : '100%'; ?>">
 						    </td>
 						    
@@ -152,17 +152,17 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 						  <tr>
 						  <!-- chk box -->
 						  	<td class="mmth-name">
-                               <?php _e('Panel fit to End-to-End', 'megamenu-plus') ?>
+                               <?php _e('Panel fit to End-to-End', 'mmplus') ?>
                            </td>
 						  <td class="mmth-sett-optn">
-						            <span class="mega-short-desc"><?php  _e('Enable', 'megamenu-plus');?></span>
+						            <span class="mega-short-desc"><?php  _e('Enable', 'mmplus');?></span>
 						    	<input type="checkbox" id="mmplus_endtoend" name="mmplus_endtoend" value="end-to-end" <?php if($mmth_builder_option['mmplus_endtoend']=="end-to-end") echo "checked"; ?>>
 						    </td>
 						</tr>
 						  <!-- radio image -->
 						  <tr>
 						  	<td class="mmth-name">
-						  		<?php _e('Panel Alingment', 'megamenu-plus');  ?>
+						  		<?php _e('Panel Alingment', 'mmplus');  ?>
 						  	</td>
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmplus-pannel-alignment">
@@ -181,30 +181,30 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 						
 						  <tr>
 						  	<td class="mmth-name">
-						  		<?php _e('Background Image', 'megamenu-plus') ?>
+						  		<?php _e('Background Image', 'mmplus') ?>
 						  	</td>
 						  	<td class="mmth-sett-optn">
 						  		
 							  	<input type="text" id="item-megamenu-bgimage-url" name="mmplus_bg_image" value="<?php echo $mmth_builder_option['mmplus_bg_image']; ?>">
-							  	<input type="button" id="set-item-megamenu-bgimage" value="<?php _e('Upload Image', 'megamenu-plus') ?>">
+							  	<input type="button" id="set-item-megamenu-bgimage" value="<?php _e('Upload Image', 'mmplus') ?>">
 						  		<?php $hidden = empty( $mmth_builder_option['mmplus_bg_image'] ) ? 'hidden' : ''  ?>
 						  		<p class="hide-if-no-js <?php echo $hidden; ?>">
 						  			<span class="img-ovrlay">
 									    <img id="item-megamenu-bgimage-container" src="<?php echo $mmth_builder_option['mmplus_bg_image']; ?>" />
 									</span><br>
 										<a href="javascript:;" id="remove_mmplus_bg_image">
-											<?php _e('Remove Image', 'megamenu-plus') ?>
+											<?php _e('Remove Image', 'mmplus') ?>
 										</a>
 								</p>					 
 						  	</td>
 						  </tr>
 						    <tr>
 						  	<td class="mmth-name">
-						  		<?php _e('Background Color/Overlay Color', 'megamenu-plus') ?>
+						  		<?php _e('Background Color/Overlay Color', 'mmplus') ?>
 						  	</td>
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmth-mega-bg-color">
-						  			<span class="mega-short-desc"><?php  _e('Color', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Color', 'mmplus');?></span>
 						  		<input type='text' class='color_picker_megamenu' name='mmplus_bg_color' value='<?php echo isset( ( $mmth_builder_option['mmplus_bg_color'] ) ) ? $mmth_builder_option['mmplus_bg_color'] : '#fff'; ?>' style='background:<?php echo isset( ( $mmth_builder_option['mmplus_bg_color'] ) ) ? $mmth_builder_option['mmplus_bg_color'] : '#fff'; ?>' />
 
 						  		
@@ -213,97 +213,97 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 						  </tr>
 						  <tr>
 						  	<td class="mmth-name">
-						  		<?php _e('Panel Padding', 'megamenu-plus'); ?>
+						  		<?php _e('Panel Padding', 'mmplus'); ?>
 						  	</td>
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmth-mega-pannel-top-padding">
-						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'mmplus');?></span>
 						  			<input class="mmplus_mega_pannel_padding_top mmth-padding" type="text" name="mmplus_mega_pannel_padding_top" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_top']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-right-padding">
-						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'mmplus');?></span>
 						  			<input class="mmplus_mega_pannel_padding_right mmth-padding" type="text" name="mmplus_mega_pannel_padding_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-bottom-padding">
-						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'mmplus');?></span>
 						  				<input class="mmplus_mega_pannel_padding_bottom mmth-padding" type="text" name="mmplus_mega_pannel_padding_bottom" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_bottom']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-left-padding">
-						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'megamenu-plus');?> </span>
+						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'mmplus');?> </span>
 						  			<input class="mmplus_mega_pannel_padding_left mmth-padding" type="text" name="mmplus_mega_pannel_padding_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_left']; ?>">
 						  		</label>
 						  	</td>
 						  </tr>
 						  <tr>
 						  	<td class="mmth-name">
-						  		<?php _e('Border', 'megamenu-plus'); ?>
+						  		<?php _e('Border', 'mmplus'); ?>
 						  	</td>
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmth-mega-border-color">
-						  			<span class="mega-short-desc"><?php  _e('Color', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Color', 'mmplus');?></span>
 						  			<input type='text' class='color_picker_megamenu' name='mmplus_border_color' value='<?php echo isset( ( $mmth_builder_option['mmplus_border_color'] ) ) ? $mmth_builder_option['mmplus_border_color'] : '#fff'; ?>' style='background:<?php echo isset( ( $mmth_builder_option['mmplus_border_color'] ) ) ? $mmth_builder_option['mmplus_border_color'] : '#fff'; ?>' />
 						  		</label>
 						 
 						  		<label class="mmth-mega-pannel-top-border">
-						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'mmplus');?></span>
 						  			<input class="mmplus_mega_pannel_border_top mmth-border" type="text" name="mmplus_mega_pannel_border_top" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_top']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-right-border">
-						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'mmplus');?></span>
 						  			<input class="mmplus_mega_pannel_border_right mmth-border" type="text" name="mmplus_mega_pannel_border_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-bottom-border">
-						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'mmplus');?></span>
 						  				<input class="mmplus_mega_pannel_border_bottom mmth-border" type="text" name="mmplus_mega_pannel_border_bottom" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_bottom']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-left-border">
-						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'megamenu-plus');?> </span>
+						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'mmplus');?> </span>
 						  			<input class="mmplus_mega_pannel_border_left mmth-border" type="text" name="mmplus_mega_pannel_border_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_left']; ?>">
 						  		</label>
 						  	</td>
 						  </tr>
 						  <tr>
 						  	<td class="mmth-name">
-						  		<?php _e('Border Radius', 'megamenu-plus'); ?>
+						  		<?php _e('Border Radius', 'mmplus'); ?>
 						  	</td>
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmth-mega-pannel-top-left-radius">
-						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'mmplus');?></span>
 						  			<input class="mmplus_mega_pannel_raidus_top_left mmth-padding" type="text" name="mmplus_mega_pannel_raidus_top_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_top_left']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-top-right-radius">
-						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'mmplus');?></span>
 						  			<input class="mmplus_mega_pannel_raidus_top_right mmth-padding" type="text" name="mmplus_mega_pannel_raidus_top_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_top_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-bottom-right-radius">
-						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'mmplus');?></span>
 						  				<input class="mmplus_mega_pannel_raidus_bottom_right mmth-padding" type="text" name="mmplus_mega_pannel_raidus_bottom_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_bottom_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-bottom-left-radius">
-						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'megamenu-plus');?> </span>
+						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'mmplus');?> </span>
 						  			<input class="mmplus_mega_pannel_raidus_bottom_left mmth-padding" type="text" name="mmplus_mega_pannel_raidus_bottom_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_bottom_left']; ?>">
 						  		</label>
 						  	</td>
 						  </tr>
 						  <tr>
 						  	<td class="mmth-name">
-						  		<?php _e('Column Padding', 'megamenu-plus'); ?>
+						  		<?php _e('Column Padding', 'mmplus'); ?>
 						  	</td>
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmth-mega-column-top-padding">
-						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'mmplus');?></span>
 						  			<input class="mmplus_mega_column_padding_top mmth-padding" type="text" name="mmplus_mega_column_padding_top" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_top']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-column-right-padding">
-						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'mmplus');?></span>
 						  			<input class="mmplus_mega_column_padding_right mmth-padding" type="text" name="mmplus_mega_column_padding_right" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-column-bottom-padding">
-						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'mmplus');?></span>
 						  				<input class="mmplus_mega_column_padding_bottom mmth-padding" type="text" name="mmplus_mega_column_padding_bottom" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_bottom']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-column-left-padding">
-						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'megamenu-plus');?> </span>
+						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'mmplus');?> </span>
 						  			<input class="mmplus_mega_column_padding_left mmth-padding" type="text" name="mmplus_mega_column_padding_left" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_left']; ?>">
 						  		</label>
 						  	</td>
@@ -311,23 +311,23 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 					
 						  <tr>
 						  	<td class="mmth-name">
-						  		<?php _e('Widget', 'megamenu-plus') ?>
+						  		<?php _e('Widget', 'mmplus') ?>
 						  	</td>
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmth-mega-widget-title-color">
-						  			<span class="mega-short-desc"><?php  _e('Title color', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Title color', 'mmplus');?></span>
 						  		<input type='text' class='color_picker_megamenu' name='mmplus_mmplus_widget_title_color' value='<?php echo isset( ( $mmth_builder_option['mmplus_mmplus_widget_title_color'] ) ) ? $mmth_builder_option['mmplus_border_color'] : '#000'; ?>' style='background:<?php echo isset( ( $mmth_builder_option['mmplus_mmplus_widget_title_color'] ) ) ? $mmth_builder_option['mmplus_border_color'] : '#000'; ?>' />
 						  	   </label>
 						  	   <label class="mmth-mega-widget-text-color">
-						  			<span class="mega-short-desc"><?php  _e('Text', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Text', 'mmplus');?></span>
 						  		<input type='text' class='color_picker_megamenu' name='mmplus_megamenu_widget_text_color' value='<?php echo isset( ( $mmth_builder_option['mmplus_megamenu_widget_text_color'] ) ) ? $mmth_builder_option['mmplus_megamenu_widget_text_color'] : '#000'; ?>' style='background:<?php echo isset( ( $mmth_builder_option['mmplus_megamenu_widget_text_color'] ) ) ? $mmth_builder_option['mmplus_megamenu_widget_text_color'] : '#000'; ?>' />
 						  	   </label>
 						  	   <label class="mmth-mega-widget-link-color">
-						  			<span class="mega-short-desc"><?php  _e('Link', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Link', 'mmplus');?></span>
 						  		<input type='text' class='color_picker_megamenu' name='mmplus_megamenu_widget_link_color' value='<?php echo isset( ( $mmth_builder_option['mmplus_megamenu_widget_link_color'] ) ) ? $mmth_builder_option['mmplus_megamenu_widget_link_color'] : '#000'; ?>' style='background:<?php echo isset( ( $mmth_builder_option['mmplus_megamenu_widget_link_color'] ) ) ? $mmth_builder_option['mmplus_megamenu_widget_link_color'] : '#000'; ?>' />
 						  	   </label>
 						  	   <label class="mmth-mega-widget-linkhvr-color">
-						  			<span class="mega-short-desc"><?php  _e('Link Hover', 'megamenu-plus');?></span>
+						  			<span class="mega-short-desc"><?php  _e('Link Hover', 'mmplus');?></span>
 						  		<input type='text' class='color_picker_megamenu' name='mmplus_megamenu_widget_linkhvr_color' value='<?php echo isset( ( $mmth_builder_option['mmplus_megamenu_widget_linkhvr_color'] ) ) ? $mmth_builder_option['mmplus_megamenu_widget_linkhvr_color'] : '#000'; ?>' style='background:<?php echo isset( ( $mmth_builder_option['mmplus_megamenu_widget_linkhvr_color'] ) ) ? $mmth_builder_option['mmplus_megamenu_widget_linkhvr_color'] : '#000'; ?>' />
 						  	   </label>
 						  	</td>	
@@ -335,7 +335,7 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 						  
                           <tr>
 						  	<td class="mmth-name">
-						  		<?php _e('Widget Content Alingment', 'megamenu-plus'); ?>
+						  		<?php _e('Widget Content Alingment', 'mmplus'); ?>
 						  	</td>
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmplus-pannel-alignment">
@@ -379,17 +379,17 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 	                        <ul>
 	                            <li>
 	                            	<a href="#icons-tabs-1" class='icon-tabs-nav active' data-icon-tabs='icons-tabs-1'>
-	                            		<?php _e('Dashicons', 'megamenu-plus'); ?>
+	                            		<?php _e('Dashicons', 'mmplus'); ?>
 	                            	</a>
 	                            </li>
 	                            <li>
 	                            	<a href="#icons-tabs-2" class='icon-tabs-nav' data-icon-tabs='icons-tabs-2'>
-	                            		<?php _e('Font Awesome', 'megamenu-plus'); ?>    		
+	                            		<?php _e('Font Awesome', 'mmplus'); ?>    		
 	                            	</a>
 	                            </li>
 	                            <li>
 	                            	<a href="#icons-tabs-3" class='icon-tabs-nav' data-icon-tabs='icons-tabs-3'>
-	                            		<?php _e('IcoFont', 'megamenu-plus'); ?>		
+	                            		<?php _e('IcoFont', 'mmplus'); ?>		
 	                            	</a>
 	                            </li>
 	                        </ul>
@@ -397,7 +397,7 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 
 	                    <div class="mmplus-icons-topbar-right">
 	                        <div class="mmth-icon-search-wrap">
-	                            <input id="mmplus_icons_search" type="text" value="" placeholder="<?php _e('Search...', 'megamenu-plus'); ?>">
+	                            <input id="mmplus_icons_search" type="text" value="" placeholder="<?php _e('Search...', 'mmplus'); ?>">
 	                            <i class="fa fa-search"></i>
 	                        </div>
 	                    </div>
@@ -445,7 +445,7 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 
 	 		<?php }else {?>
 	 			<div class="mmth-no-mega-menu">
-	 				<?php _e('Mega Menu will only work on top level menu items.', 'megamenu-plus') ?>
+	 				<?php _e('Mega Menu will only work on top level menu items.', 'mmplus') ?>
 	 			</div>
 		 		<?php } ?>
  		</div>	
