@@ -153,7 +153,7 @@ if ( ! class_exists('MMPlus_Widgets')) {
 
                     <div class="widget-title-action">
                         <button type="button" class="widget-action hide-if-no-js widget-form-open" aria-expanded="false">
-                            <span class="screen-reader-text"><?php printf( __( 'Edit widget: %s' ), $control['name'] ); ?></span>
+                            <span class="screen-reader-text"><?php printf( __( 'Edit widget: %s','mmplus' ), $control['name'] ); ?></span>
                             <span class="toggle-indicator" aria-hidden="true"></span>
                         </button>
 
