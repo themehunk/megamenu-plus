@@ -381,6 +381,34 @@ display:block;
 body.mmplus-menu .primary-menu ul ul {
     top:auto;
 }
+
+/*woocommerce product style*/
+.mmplus-megamenu li.mmplus-is-megamenu .mmplus-menu-item.mmplus-mmth-type-widget ul.product_list_widget {
+    list-style: none outside;
+    padding: 0!important;
+    margin: 0!important;
+}
+.mmplus-megamenu li.mmplus-is-megamenu .mmplus-menu-item.mmplus-mmth-type-widget ul.product_list_widget li {
+    margin-bottom: 15px;
+    padding: 0;
+    list-style: none!important;
+}
+.mmplus-megamenu li.mmplus-is-megamenu .mmplus-menu-item.mmplus-mmth-type-widget ul.product_list_widget li img {
+    float: left;
+    width: 60px;
+    margin-left: 0;
+    margin-right: 15px;
+}
+.mmplus-is-megamenu *, .mmplus-is-megamenu *::before, .mmplus-is-megamenu *::after {
+    box-sizing: initial;
+}
+.woocommerce .mmplus-is-megamenu 
+ .star-rating {
+    font-size: 10px;
+    margin: 0;
+    float: inherit;
+    display: inline-flex;
+}
 @media only screen and (max-width:1024px){
 li.mmplus-menu-item-has-children.mega-toggle-on > a.mmplus-menu-link > span.mega-indicator:after {
 content: '\f142';
