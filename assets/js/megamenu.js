@@ -127,7 +127,7 @@ plugin.showPanel = function(anchor) {
 
 plugin.calculateDynamicSubmenuWidths = function(anchor) {
             // apply dynamic width and sub menu position (only to top level mega menus)
-            if (anchor.parent().hasClass("mmplus-is-megamenu") && anchor.parent().parent().hasClass("max-mega-menu") && plugin.settings.panel_width && $(plugin.settings.panel_width).length > 0) {
+            if (anchor.parent().hasClass("mmplus-is-megamenu") && plugin.settings.panel_width && $(plugin.settings.panel_width).length > 0) {
                 if (plugin.isDesktopView()) {
                     var submenu_offset = $menu.offset();
                     var target_offset = $(plugin.settings.panel_width).offset();

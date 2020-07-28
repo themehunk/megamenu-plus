@@ -355,7 +355,7 @@ class MMPlus_Menu_Settings {
                                                             'settings' => array(
                                                                 array(
                                                                     'title' => "Height (px)",
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_item_link_height',
                                                                     'validation' => 'int'
                                                                 )
@@ -504,28 +504,28 @@ class MMPlus_Menu_Settings {
                                                             'settings' => array(
                                                                 array(
                                                                     'title' => __( "Top (px)", "mmplus" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_padding_top',
                                                                     'validation'=>'int'
                                                                     
                                                                 ),
                                                                 array(
                                                                     'title' => __( "Right (px)", "mmplus" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_padding_right',
                                                                     'validation'=>'int'
                                                                   
                                                                 ),
                                                                 array(
                                                                     'title' => __( "Bottom (px)", "mmplus" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_padding_bottom',
                                                                     'validation'=>'int'
                                                                    
                                                                 ),
                                                                 array(
                                                                     'title' => __( "Left (px)", "mmplus" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_padding_left',
                                                                     'validation'=>'int'
                                                                  
@@ -534,19 +534,19 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                             'menu_margin' => array(
                                                             'priority' => 13,
-                                                            'title' => __( "Menu Margin (px)", "mmplus" ),
+                                                            'title' => __( "Menu Margin", "mmplus" ),
                                                             'description' =>'',
                                                             'settings' => array(
                                                                 array(
                                                                     'title' => __( "Left (px)", "mmplus" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_margin_left',
                                                                     'validation'=>'int'
                                                                     
                                                                 ),
                                                                 array(
                                                                     'title' => __( "Right (px)", "mmplus" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_margin_right',
                                                                     'validation'=>'int'
                                                                   
@@ -562,28 +562,28 @@ class MMPlus_Menu_Settings {
                                                             'settings' => array(
                                                                 array(
                                                                     'title' => __( "Top Left (px)", "mmplusu" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_border_radius_top_left',
                                                                     'validation'=>'int'
                                                                    
                                                                 ),
                                                                 array(
                                                                     'title' => __( "Top Right (px)", "mmplus" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_border_radius_top_right',
                                                                     'validation'=>'int'
                                                                   
                                                                 ),
                                                                 array(
                                                                     'title' => __( "Bottom Right (px)", "mmplus" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_border_radius_bottom_right',
                                                                     'validation'=>'int'
                                                                    
                                                                 ),
                                                                 array(
                                                                     'title' => __( "Bottom Left (px)", "mmplus" ),
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'menu_border_radius_bottom_left',
                                                                     'validation'=>'int'
                                                             
@@ -604,7 +604,7 @@ class MMPlus_Menu_Settings {
                                                             'settings' => array(
                                                                 array(
                                                                     'title' => "",
-                                                                    'type' => 'freetext',
+                                                                    'type' => 'number',
                                                                     'key' => 'responsive_breakpoint',
                                                                     'validation' => 'int'
                                                                 )
@@ -684,7 +684,7 @@ class MMPlus_Menu_Settings {
                                                     'settings' => array(
                                                         array(
                                                             'title' => "Height (px)",
-                                                            'type' => 'freetext',
+                                                            'type' => 'number',
                                                             'key' => 'toggle_bar_height',
                                                             'validation'=>'int'
                                                         ),
@@ -890,6 +890,9 @@ class MMPlus_Menu_Settings {
                                         case "freetext":
                                             $this->mmplus_print_theme_freetext_option( $setting['key'] );
                                             break;
+                                        case "number":
+                                            $this->mmplus_print_theme_number_option( $setting['key'] );
+                                            break;    
                                         case "textarea":
                                             $this->mmplus_print_theme_textarea_option( $setting['key'] );
                                             break;
@@ -1066,6 +1069,20 @@ class MMPlus_Menu_Settings {
         $value = $this->active_theme[$key];
 
         echo "<input class='mega-setting-{$key}' type='text' name='settings[$key]' value='{$value}' />";
+
+    }
+    /**
+     * Print a number input
+     *
+     * @since 1.0
+     * @param string $key
+     * @param string $value
+     */
+    public function mmplus_print_theme_number_option( $key ) {
+
+        $value = $this->active_theme[$key];
+
+        echo "<input class='mega-setting-{$key}' type='number' name='settings[$key]' value='{$value}' />";
 
     }
     /**
