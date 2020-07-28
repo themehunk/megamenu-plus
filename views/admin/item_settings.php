@@ -65,7 +65,7 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
  		<!-- Please activate MegaMenu for this menu item. -->
  		<?php if ( $menu_item_depth == 0 ) { ?>
  		<h3 class="activate-megamenu-msg" style="<?php if ( $mmplus_item_megamenu_status == 'active' ) { echo 'display: none;';	} ?>">
- 			<?php _e( 'Please activate MegaMenu for this menu item.', 'megemenu-mmplus' ) ?>	
+ 			<?php _e( 'Please activate MegaMenu for this menu item.', 'mmplus' ) ?>	
  		</h3>		
  		<div class="mmplus-builder-content" style="<?php if ( $mmplus_item_megamenu_status == 'inactive' ) { echo 'display: none;';	} ?>">	
  			<div class="mmth-builder">
@@ -80,12 +80,12 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 	                                <div class="mmplus-row" data-row-id="<?php echo $layout_key; ?>">
 
 	                                <div class="mmplus-row-actions">
-	                                    <div class="mmplus-row-left mmthRowSortingIcon"> <i class="fa fa-sort"></i> <?php  _e('Row', 'megemenu-mmplus')  ?></div>
+	                                    <div class="mmplus-row-left mmthRowSortingIcon"> <i class="fa fa-sort"></i> <?php  _e('Row', 'mmplus')  ?></div>
 	                                    <div class="mmplus-row-right"> 
 				 							<span class="mmplus-add-col-btn">
 	                                    		<span class="dashicons dashicons-plus">
 				 								</span>
-				 								<?php _e('Column', 'megemenu-mmplus') ?> 
+				 								<?php _e('Column', 'mmplus') ?> 
 				 							</span>
 	                                    	<span class="mmthRowDeleteIcon">
 	                                    		<i class="fa fa-trash-o"></i> 
@@ -100,7 +100,7 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 
 	                                    <div class="mmplus-item-wrap">
 	                                        <div class="mmplus-column-actions">
-	                                        	<span class="mmplusColSortingIcon"><i class="fa fa-arrows"></i> <?php _e('Column', 'megemenu-mmplus') ?> 
+	                                        	<span class="mmplusColSortingIcon"><i class="fa fa-arrows"></i> <?php _e('Column', 'mmplus') ?> 
 	                                    		</span>
 	                                    		<span class="mmthColDeleteIcon">
 	                                    			<i class="fa fa-trash-o"></i> 
