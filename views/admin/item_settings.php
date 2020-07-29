@@ -218,19 +218,19 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmth-mega-pannel-top-padding">
 						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'mmplus');?></span>
-						  			<input class="mmplus_mega_pannel_padding_top mmth-padding" type="text" name="mmplus_mega_pannel_padding_top" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_top']; ?>">
+						  			<input class="mmplus_mega_pannel_padding_top mmth-padding" type="number" name="mmplus_mega_pannel_padding_top" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_top']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-right-padding">
 						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'mmplus');?></span>
-						  			<input class="mmplus_mega_pannel_padding_right mmth-padding" type="text" name="mmplus_mega_pannel_padding_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_right']; ?>">
+						  			<input class="mmplus_mega_pannel_padding_right mmth-padding" type="number" name="mmplus_mega_pannel_padding_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-bottom-padding">
 						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'mmplus');?></span>
-						  				<input class="mmplus_mega_pannel_padding_bottom mmth-padding" type="text" name="mmplus_mega_pannel_padding_bottom" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_bottom']; ?>">
+						  				<input class="mmplus_mega_pannel_padding_bottom mmth-padding" type="number" name="mmplus_mega_pannel_padding_bottom" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_bottom']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-left-padding">
 						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'mmplus');?> </span>
-						  			<input class="mmplus_mega_pannel_padding_left mmth-padding" type="text" name="mmplus_mega_pannel_padding_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_left']; ?>">
+						  			<input class="mmplus_mega_pannel_padding_left mmth-padding" type="number" name="mmplus_mega_pannel_padding_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_padding_left']; ?>">
 						  		</label>
 						  	</td>
 						  </tr>
@@ -246,19 +246,19 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 						 
 						  		<label class="mmth-mega-pannel-top-border">
 						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'mmplus');?></span>
-						  			<input class="mmplus_mega_pannel_border_top mmth-border" type="text" name="mmplus_mega_pannel_border_top" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_top']; ?>">
+						  			<input class="mmplus_mega_pannel_border_top mmth-border" type="number" name="mmplus_mega_pannel_border_top" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_top']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-right-border">
 						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'mmplus');?></span>
-						  			<input class="mmplus_mega_pannel_border_right mmth-border" type="text" name="mmplus_mega_pannel_border_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_right']; ?>">
+						  			<input class="mmplus_mega_pannel_border_right mmth-border" type="number" name="mmplus_mega_pannel_border_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-bottom-border">
 						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'mmplus');?></span>
-						  				<input class="mmplus_mega_pannel_border_bottom mmth-border" type="text" name="mmplus_mega_pannel_border_bottom" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_bottom']; ?>">
+						  				<input class="mmplus_mega_pannel_border_bottom mmth-border" type="number" name="mmplus_mega_pannel_border_bottom" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_bottom']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-left-border">
 						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'mmplus');?> </span>
-						  			<input class="mmplus_mega_pannel_border_left mmth-border" type="text" name="mmplus_mega_pannel_border_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_left']; ?>">
+						  			<input class="mmplus_mega_pannel_border_left mmth-border" type="number" name="mmplus_mega_pannel_border_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_border_left']; ?>">
 						  		</label>
 						  	</td>
 						  </tr>
@@ -269,19 +269,19 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmth-mega-pannel-top-left-radius">
 						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'mmplus');?></span>
-						  			<input class="mmplus_mega_pannel_raidus_top_left mmth-padding" type="text" name="mmplus_mega_pannel_raidus_top_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_top_left']; ?>">
+						  			<input class="mmplus_mega_pannel_raidus_top_left mmth-padding" type="number" name="mmplus_mega_pannel_raidus_top_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_top_left']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-top-right-radius">
 						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'mmplus');?></span>
-						  			<input class="mmplus_mega_pannel_raidus_top_right mmth-padding" type="text" name="mmplus_mega_pannel_raidus_top_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_top_right']; ?>">
+						  			<input class="mmplus_mega_pannel_raidus_top_right mmth-padding" type="number" name="mmplus_mega_pannel_raidus_top_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_top_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-bottom-right-radius">
 						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'mmplus');?></span>
-						  				<input class="mmplus_mega_pannel_raidus_bottom_right mmth-padding" type="text" name="mmplus_mega_pannel_raidus_bottom_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_bottom_right']; ?>">
+						  				<input class="mmplus_mega_pannel_raidus_bottom_right mmth-padding" type="number" name="mmplus_mega_pannel_raidus_bottom_right" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_bottom_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-pannel-bottom-left-radius">
 						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'mmplus');?> </span>
-						  			<input class="mmplus_mega_pannel_raidus_bottom_left mmth-padding" type="text" name="mmplus_mega_pannel_raidus_bottom_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_bottom_left']; ?>">
+						  			<input class="mmplus_mega_pannel_raidus_bottom_left mmth-padding" type="number" name="mmplus_mega_pannel_raidus_bottom_left" value="<?php echo $mmth_builder_option['mmplus_mega_pannel_raidus_bottom_left']; ?>">
 						  		</label>
 						  	</td>
 						  </tr>
@@ -292,19 +292,19 @@ define('MMPLUS_ALIGN_RIGHT', MMPLUS_URL . 'assets/images/right-align.png');
 						  	<td class="mmth-sett-optn">
 						  		<label class="mmth-mega-column-top-padding">
 						  			<span class="mega-short-desc"><?php  _e('Top (px)', 'mmplus');?></span>
-						  			<input class="mmplus_mega_column_padding_top mmth-padding" type="text" name="mmplus_mega_column_padding_top" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_top']; ?>">
+						  			<input class="mmplus_mega_column_padding_top mmth-padding" type="number" name="mmplus_mega_column_padding_top" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_top']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-column-right-padding">
 						  			<span class="mega-short-desc"><?php  _e('Right (px)', 'mmplus');?></span>
-						  			<input class="mmplus_mega_column_padding_right mmth-padding" type="text" name="mmplus_mega_column_padding_right" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_right']; ?>">
+						  			<input class="mmplus_mega_column_padding_right mmth-padding" type="number" name="mmplus_mega_column_padding_right" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_right']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-column-bottom-padding">
 						  			<span class="mega-short-desc"><?php  _e('Bottom (px)', 'mmplus');?></span>
-						  				<input class="mmplus_mega_column_padding_bottom mmth-padding" type="text" name="mmplus_mega_column_padding_bottom" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_bottom']; ?>">
+						  				<input class="mmplus_mega_column_padding_bottom mmth-padding" type="number" name="mmplus_mega_column_padding_bottom" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_bottom']; ?>">
 						  		</label>
 						  		<label class="mmth-mega-column-left-padding">
 						  			<span class="mega-short-desc"><?php  _e('Left (px)', 'mmplus');?> </span>
-						  			<input class="mmplus_mega_column_padding_left mmth-padding" type="text" name="mmplus_mega_column_padding_left" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_left']; ?>">
+						  			<input class="mmplus_mega_column_padding_left mmth-padding" type="number" name="mmplus_mega_column_padding_left" value="<?php echo $mmth_builder_option['mmplus_mega_column_padding_left']; ?>">
 						  		</label>
 						  	</td>
 						  </tr>

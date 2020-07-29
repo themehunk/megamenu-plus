@@ -11,6 +11,9 @@ background:#000;
 color:#fff;
 padding:7px 30px;
 }
+.mega-tab-content input[type=number],.mmplus-builder-config-options-data input[type=number]{
+    padding-right:0;
+}
 /***Admin side menu items**/
 
 #menu-to-edit li.menu-item .megamenu_mmplus_begin:before{

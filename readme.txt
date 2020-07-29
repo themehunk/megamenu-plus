@@ -1,38 +1,62 @@
-====== Megamenu Plus ========
-Contributors: themehunk
+====== Megamenu-plus - Menu builder ========
+Contributors: ThemeHunk
 Author URI: : https://www.themehunk.com/
-Tags:
+Tags: megamenu, mega menu, menu builder, custom menu
 Requires at least: 5.0
-Requires PHP: 5.6
-Tested up to: 5.4.1
-Stable tag: 1.0.0
-License: GPLv3 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
+Tested up to: 5.4.2
+Stable tag: 1.0.8
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Megamenu plus is a free, fast and most user friendly plugin available for WordPress. This plugin comes with complete styling options for normal and mega menu, You can add page, post, widgets, products, text and custom link in the menu.
 
 == Description ==
 
+**Megamenu plus** Megamenu plus is a free, fast and most user friendly plugin available for WordPress. This plugin comes with complete styling options for normal and mega menu, You can add page, post, widgets, products, text and custom link in the menu. You can create mega menu for shop, agency, blog, magazine websites. 
+
+[Megamenu plus](https://themehunk.com/product/megamenu-plus/)   |  [Docs](https://www.themehunk.com/support/)
+
 **Key Features:-**
 
-**Features:**
+* Drag and Drop menu Builder
+* Styling options for default menu.
+* Styling options for Megamenu.
+* Support page, post, widgets, products, text and custom link in the mega menu.
+* Unlimited row and column builder.
+* 24x7 support available for free product too [http://www.themehunk.com/support](http://www.themehunk.com/support). 
 
-Not all but required features will be added to particular theme.
+
 
 == Installation ==
 
 1. Upload the `megamenu-plus.zip` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Get started from Dashboard > Megamenu-plus
 
 == Frequently Asked Questions ==
 
 = How to Install Plugin =
 Just upload the `megamenu-plus.zip` to the `/wp-content/plugins/` directory, and then activate it from 'Plugins' menu in WordPress.
 
-1. [Docs](http://www.themehunk.com/docs/megamenu-plus/)
-2. [Support Forum](https://wordpress.org/support/plugin/megamenu-plus)
-
+1. [Support Forum](https://www.themehunk.com/support/#plugin.25)
 
 == Screenshots ==
+1. Drag & Drop Modules
+2. Default menu styling
+3. Background Styling
 
 == Changelog ==
 
 = 1.0.0 =
 Initial release
+
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+Initial release
+
+
+Thanks for using our plugin, I am sure you will create a great megamenu for your site. If you have any query then you can contact at our forum : http://www.themehunk.com/support
+
+Thank You
