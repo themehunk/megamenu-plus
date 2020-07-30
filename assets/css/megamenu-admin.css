@@ -976,3 +976,69 @@ border-color: #2575ca;
 .mega-setting-responsive_breakpoint,.mega-setting-toggle_bar_height,.mega-setting-menu_item_link_height,.mega-setting-menu_padding_top,.mega-setting-menu_padding_bottom,.mega-setting-menu_padding_left,.mega-setting-menu_padding_right,.mega-setting-menu_margin_left,.mega-setting-menu_margin_right,.mega-setting-menu_border_radius_top_left,.mega-setting-menu_border_radius_top_right,.mega-setting-menu_border_radius_bottom_right,.mega-setting-menu_border_radius_bottom_left{
 width:70px;
 }
+
+
+label.mega-menu_link_color,label.mega-menu_hvr_color,
+label.mega-menu_link_bg_color,label.mega-menu_link_hvr_bg_color,
+label.mega-sub_menu_bg_color,label.mega-sub_menu_link_color,
+label.mega-sub_menu_hvr_color,label.mega-menu_bg_color,
+label.mega-sub_menu_hvr_bg_color,label.mega-toggle_text_clr,
+label.mega-toggle_bg_color,label.mega-toggle_icon_clr,
+label.mega-mobile_menu_bg_color,label.mega-mobile_menu_link_color,
+label.mega-mobile_menu_link_bg_color,label.mega-mobile_menu_hvr_bg_color,
+label.mega-mobile_menu_hvr_link_color,
+label.mega-mobile_sub_menu_bg_link_color,
+label.mega-mobile_sub_menu_bg_link_hvr_color,
+label.mega-mobile_sub_menu_link_color,
+label.mega-mobile_sub_menu_link_hvr_color,
+label.mega-mobile_sub_menu_hide,
+label.mega-mobile-open-toggle-icon,
+label.mega-mobile-close-toggle-icon{
+width: 100%;
+-js-display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.mega-menu_link_color .mega-short-desc,
+.mega-menu_hvr_color .mega-short-desc,
+.mega-menu_link_bg_color .mega-short-desc,
+.mega-menu_link_hvr_bg_color .mega-short-desc,
+.mega-sub_menu_bg_color .mega-short-desc,
+.mega-sub_menu_link_color .mega-short-desc,
+.mega-sub_menu_hvr_color .mega-short-desc,
+.mega-menu_bg_color .mega-short-desc,
+.mega-sub_menu_hvr_bg_color .mega-short-desc,
+.mega-toggle_text_clr .mega-short-desc,
+.mega-toggle_bg_color .mega-short-desc,
+.mega-toggle_icon_clr .mega-short-desc,
+.mega-mobile_menu_bg_color .mega-short-desc,
+.mega-mobile_menu_link_color .mega-short-desc,
+.mega-mobile_menu_link_bg_color .mega-short-desc,
+.mega-mobile_menu_hvr_bg_color .mega-short-desc,
+.mega-mobile_menu_hvr_link_color .mega-short-desc,
+.mega-mobile_sub_menu_bg_link_color .mega-short-desc,
+.mega-mobile_sub_menu_bg_link_hvr_color .mega-short-desc,
+.mega-mobile_sub_menu_link_color .mega-short-desc,
+.mega-mobile_sub_menu_link_hvr_color .mega-short-desc,
+.mega-mobile_sub_menu_hide .mega-short-desc,
+.mega-mobile-open-toggle-icon .mega-short-desc,
+.mega-mobile-close-toggle-icon .mega-short-desc,
+.mega-mobile-close-toggle-icon .mega-short-desc{
+padding-bottom:0!important;
+    margin-right: 8px;
+}

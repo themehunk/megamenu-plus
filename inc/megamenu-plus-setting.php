@@ -350,11 +350,11 @@ class MMPlus_Menu_Settings {
                                                     'settings' => array(
                                                             'menu_item_height' => array(
                                                             'priority' => 05,
-                                                            'title' => __( "Menu Height", "mmplus" ),
+                                                            'title' => __( "Menu Height (px)", "mmplus" ),
                                                             'description' =>'',
                                                             'settings' => array(
                                                                 array(
-                                                                    'title' => "Height (px)",
+                                                                    'title' => "Height",
                                                                     'type' => 'number',
                                                                     'key' => 'menu_item_link_height',
                                                                     'validation' => 'int'
@@ -499,32 +499,32 @@ class MMPlus_Menu_Settings {
 
                                                             'mobile_menu_padding' => array(
                                                             'priority' => 13,
-                                                            'title' => __( "Menu Padding", "mmplus" ),
+                                                            'title' => __( "Menu Padding (px)", "mmplus" ),
                                                             'description' =>'',
                                                             'settings' => array(
                                                                 array(
-                                                                    'title' => __( "Top (px)", "mmplus" ),
+                                                                    'title' => __( "Top", "mmplus" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_padding_top',
                                                                     'validation'=>'int'
                                                                     
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Right (px)", "mmplus" ),
+                                                                    'title' => __( "Right", "mmplus" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_padding_right',
                                                                     'validation'=>'int'
                                                                   
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Bottom (px)", "mmplus" ),
+                                                                    'title' => __( "Bottom", "mmplus" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_padding_bottom',
                                                                     'validation'=>'int'
                                                                    
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Left (px)", "mmplus" ),
+                                                                    'title' => __( "Left", "mmplus" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_padding_left',
                                                                     'validation'=>'int'
@@ -534,18 +534,18 @@ class MMPlus_Menu_Settings {
                                                             ),
                                                             'menu_margin' => array(
                                                             'priority' => 13,
-                                                            'title' => __( "Menu Margin", "mmplus" ),
+                                                            'title' => __( "Menu Margin (px)", "mmplus" ),
                                                             'description' =>'',
                                                             'settings' => array(
                                                                 array(
-                                                                    'title' => __( "Left (px)", "mmplus" ),
+                                                                    'title' => __( "Left", "mmplus" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_margin_left',
                                                                     'validation'=>'int'
                                                                     
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Right (px)", "mmplus" ),
+                                                                    'title' => __( "Right", "mmplus" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_margin_right',
                                                                     'validation'=>'int'
@@ -557,32 +557,32 @@ class MMPlus_Menu_Settings {
 
                                                             'menu_border_radius' => array(
                                                             'priority' => 14,
-                                                            'title' => __( "Menu Border Radius", "mmplus" ),
+                                                            'title' => __( "Menu Border Radius (px)", "mmplus" ),
                                                             'description' => __( "Set a border radius on the main menu bar.", "mmplus" ),
                                                             'settings' => array(
                                                                 array(
-                                                                    'title' => __( "Top Left (px)", "mmplusu" ),
+                                                                    'title' => __( "Top Left", "mmplusu" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_border_radius_top_left',
                                                                     'validation'=>'int'
                                                                    
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Top Right (px)", "mmplus" ),
+                                                                    'title' => __( "Top Right", "mmplus" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_border_radius_top_right',
                                                                     'validation'=>'int'
                                                                   
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Bottom Right (px)", "mmplus" ),
+                                                                    'title' => __( "Bottom Right", "mmplus" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_border_radius_bottom_right',
                                                                     'validation'=>'int'
                                                                    
                                                                 ),
                                                                 array(
-                                                                    'title' => __( "Bottom Left (px)", "mmplus" ),
+                                                                    'title' => __( "Bottom Left", "mmplus" ),
                                                                     'type' => 'number',
                                                                     'key' => 'menu_border_radius_bottom_left',
                                                                     'validation'=>'int'
