@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // disable direct access.
 }
 
-if ( ! class_exists( 'MMPlus_Menu_Style_Manager' ) ) :
+if ( ! class_exists( 'ThemeHunk_MegaMenu_Menu_Style_Manager' ) ) :
 
 /**
  *
  */
-final class MMPlus_Menu_Style_Manager {
+final class ThemeHunk_MegaMenu_Menu_Style_Manager {
 
     /**
      *
@@ -23,15 +23,15 @@ final class MMPlus_Menu_Style_Manager {
      * @since 1.0
      */
     public function __construct() {
-        $this->settings = get_option( "mmplus_settings" );
+        $this->settings = get_option( "themehunk_megamenu_settings" );
     }
 
      /**
      * Return the default menu theme
      */
-    public function mmplus_get_default_theme(){
-        return apply_filters("mmplus_default_theme", array(
-            'title'  => __("Default", "mmplus"),
+    public function themehunk_megamenu_get_default_theme(){
+        return apply_filters("themehunk_megamenu_default_theme", array(
+            'title'  => __("Default", "themehunk-megamenu"),
             'menu_item_link_height'  => '40',
             'menu_item_align'        => 'left',
             'menu_bg_color'          => '#fff',
@@ -91,11 +91,11 @@ final class MMPlus_Menu_Style_Manager {
      *
      * @since 1.0
      */
-    public function mmplus_default_themes() {
+    public function themehunk_megamenu_default_themes() {
 
-        $themes['default'] = $this->mmplus_get_default_theme();
+        $themes['default'] = $this->themehunk_megamenu_get_default_theme();
 
-        return apply_filters( "mmplus_themes", $themes );
+        return apply_filters( "themehunk_megamenu_themes", $themes );
     }
 
 
@@ -105,9 +105,9 @@ final class MMPlus_Menu_Style_Manager {
      *
      * @since 2.1
      */
-    private function mmplus_merge_in_saved_themes( $all_themes ) {
+    private function themehunk_megamenu_merge_in_saved_themes( $all_themes ) {
 
-        if ( $saved_themes = mmplus_menu_get_themes() ) {
+        if ( $saved_themes = themehunk_megamenu_menu_get_themes() ) {
 
             foreach ( $saved_themes as $key => $settings ) {
 
@@ -130,9 +130,9 @@ final class MMPlus_Menu_Style_Manager {
      *
      * @since 2.1
      */
-    private function mmplus_ensure_all_themes_have_all_default_theme_settings( $all_themes ) {
+    private function themehunk_megamenu_ensure_all_themes_have_all_default_theme_settings( $all_themes ) {
 
-        $default_theme = $this->mmplus_get_default_theme();
+        $default_theme = $this->themehunk_megamenu_get_default_theme();
 
         $themes = array();
 
@@ -148,7 +148,7 @@ final class MMPlus_Menu_Style_Manager {
      *
      * @since 2.1
      */
-    private function mmplus_process_theme_replacements( $all_themes ) {
+    private function themehunk_megamenu_process_theme_replacements( $all_themes ) {
 
         foreach ( $all_themes as $key => $settings ) {
 
@@ -172,7 +172,7 @@ final class MMPlus_Menu_Style_Manager {
      *
      * @since 2.1
      */
-    private function mmplus_get_theme_id_for_location( $location ) {
+    private function themehunk_megamenu_get_theme_id_for_location( $location ) {
 
         $settings = $this->settings;
 
@@ -189,15 +189,15 @@ final class MMPlus_Menu_Style_Manager {
      */
     public function get_themes() {
 
-        $mmplus_default_themes = $this->mmplus_default_themes();
+        $themehunk_megamenu_default_themes = $this->themehunk_megamenu_default_themes();
 
-        $all_themes = $this->mmplus_merge_in_saved_themes( $mmplus_default_themes );
+        $all_themes = $this->themehunk_megamenu_merge_in_saved_themes( $themehunk_megamenu_default_themes );
 
-        $all_themes = $this->mmplus_ensure_all_themes_have_all_default_theme_settings( $all_themes );
+        $all_themes = $this->themehunk_megamenu_ensure_all_themes_have_all_default_theme_settings( $all_themes );
 
-        $all_themes = $this->mmplus_process_theme_replacements( $all_themes );
+        $all_themes = $this->themehunk_megamenu_process_theme_replacements( $all_themes );
 
-        uasort( $all_themes, array( $this, 'mmplus_sort_by_title' ) );
+        uasort( $all_themes, array( $this, 'themehunk_megamenu_sort_by_title' ) );
 
         return $all_themes;
 
@@ -209,7 +209,7 @@ final class MMPlus_Menu_Style_Manager {
      * @param array $a
      * @param array $b
      */
-    private function mmplus_sort_by_title( $a, $b ) {
+    private function themehunk_megamenu_sort_by_title( $a, $b ) {
 
         return strcmp( $a['title'], $b['title'] );
 
@@ -220,9 +220,9 @@ final class MMPlus_Menu_Style_Manager {
      *
      * @since 1.3
      */
-    private function mmplus_get_theme_settings_for_location( $location ) {
+    private function themehunk_megamenu_get_theme_settings_for_location( $location ) {
 
-        $theme_id = $this->mmplus_get_theme_id_for_location( $location );
+        $theme_id = $this->themehunk_megamenu_get_theme_id_for_location( $location );
 
         $all_themes = $this->get_themes();
 

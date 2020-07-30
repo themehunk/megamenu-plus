@@ -2,23 +2,23 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // disable direct access.
 }
-class MMPlus_Nav_Menu_Settings {
+class ThemeHunk_MegaMenu_Nav_Menu_Settings {
 	
 	public function __construct() {
-		add_action( 'load-nav-menus.php', array( $this, 'mmplus_add_metabox_to_nav_menu_settings' ) );
-		add_action('wp_ajax_mmplus_nav_menu_save', array($this, 'mmplus_nav_menu_save'));
+		add_action( 'load-nav-menus.php', array( $this, 'themehunk_megamenu_add_metabox_to_nav_menu_settings' ) );
+		add_action('wp_ajax_themehunk_megamenu_nav_menu_save', array($this, 'themehunk_megamenu_nav_menu_save'));
     }
 
-	public function mmplus_add_metabox_to_nav_menu_settings() {
-        add_meta_box( 'mmplus-nav-menu-metabox-set', __( 'Megamenu Plus Setting', 'mmplus'), array( $this, 'mmplus_themes_meta_box' ), 'nav-menus', 'side', 'high' );
+	public function themehunk_megamenu_add_metabox_to_nav_menu_settings() {
+        add_meta_box( 'themehunk-megamenu-nav-menu-metabox-set', __( 'ThemeHunk MegaMenu Setting', 'themehunk-megamenu'), array( $this, 'themehunk_megamenu_themes_meta_box' ), 'nav-menus', 'side', 'high' );
     }
 
-    public function mmplus_themes_meta_box( ){ 
-        include_once( MMPLUS_DIR . 'inc/megamenu-nav-menu-metadata.php' );
+    public function themehunk_megamenu_themes_meta_box( ){ 
+        include_once( THMM_DIR . 'inc/megamenu-nav-menu-metadata.php' );
     }
 
-    public function mmplus_nav_menu_save(){
-        check_ajax_referer( 'mmplus_check_security', 'mmplus_nonce' );
+    public function themehunk_megamenu_nav_menu_save(){
+        check_ajax_referer( 'themehunk_megamenu_check_security', 'themehunk_megamenu_nonce' );
 
         $menu_id = (int) sanitize_text_field($_POST['menu_id']);
         $mmth_settings_json_string = $_POST['mmth_settings'];
@@ -42,30 +42,30 @@ class MMPlus_Nav_Menu_Settings {
                 }
             }
 
-            if ( ! get_option( 'mmplus_options' ) ) {
+            if ( ! get_option( 'themehunk_megamenu_options' ) ) {
 
-                update_option( 'mmplus_options', $saved_settings );
+                update_option( 'themehunk_megamenu_options', $saved_settings );
 
             } else {
 
                 
-                $existing_settings = get_option( 'mmplus_options' );
+                $existing_settings = get_option( 'themehunk_megamenu_options' );
 
                 $new_settings = array_merge( $existing_settings, $saved_settings );
 
-                update_option( 'mmplus_options', $new_settings );
+                update_option( 'themehunk_megamenu_options', $new_settings );
 
             }
 
             
-            $mmth_updated_option = get_option( 'mmplus_options' );
+            $mmth_updated_option = get_option( 'themehunk_megamenu_options' );
 
             
-        wp_send_json_success( array( 'msg' => __( 'Settings saved.', 'mmplus'), 
+        wp_send_json_success( array( 'msg' => __( 'Settings saved.', 'themehunk-megamenu'), 
             'setting_data' => $mmth_settings_array,
             'mmth_updated_option' => $mmth_updated_option ) 
     );
 
     }
 }
-new MMPlus_Nav_Menu_Settings();
+new ThemeHunk_MegaMenu_Nav_Menu_Settings();

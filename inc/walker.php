@@ -8,20 +8,20 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // disable direct access.
 }
-class MMPlus_Walker extends Walker_Nav_Menu
+class ThemeHunk_MegaMenu_Walker extends Walker_Nav_Menu
 {
 
     public $item_ID;
     public $isMegaMenu;
     /**
-    * MMPlus_Style constructor.
+    * ThemeHunk_MegaMenu_Style constructor.
    */
     
 
-    public function MMPlus_Walker_option(){
+    public function ThemeHunk_MegaMenu_Walker_option(){
 
-         $mmplus_builder_options  = get_post_meta( $this->item_ID, 'mmplus_builder_options', true );
-         return $mmplus_builder_options;        
+         $themehunk_megamenu_builder_options  = get_post_meta( $this->item_ID, 'themehunk_megamenu_builder_options', true );
+         return $themehunk_megamenu_builder_options;        
 
     }
         /**)
@@ -38,91 +38,91 @@ class MMPlus_Walker extends Walker_Nav_Menu
     public function start_lvl( &$output, $depth = 0, $args = array() ){
         $style = '';
         $data_alignment = '';
-        $mmplus_endtoend = '';
+        $themehunk_megamenu_endtoend = '';
         $stylemegamenu = '';
         $st_megamenu ='';
   
         if ( $this->isMegaMenu == 'active' && $depth == 0 ) {
-            $mmplus_builder_options  = get_post_meta( $this->item_ID, 'mmplus_builder_options', true );
+            $themehunk_megamenu_builder_options  = get_post_meta( $this->item_ID, 'themehunk_megamenu_builder_options', true );
          
-            $mmplus_width = isset($mmplus_builder_options['mmplus_width']) ? "width:{$mmplus_builder_options['mmplus_width']};" : '';
-            $mmplus_bg_color = isset($mmplus_builder_options['mmplus_bg_color']) ? $mmplus_builder_options['mmplus_bg_color'] : '';
+            $themehunk_megamenu_width = isset($themehunk_megamenu_builder_options['themehunk_megamenu_width']) ? "width:{$themehunk_megamenu_builder_options['themehunk_megamenu_width']};" : '';
+            $themehunk_megamenu_bg_color = isset($themehunk_megamenu_builder_options['themehunk_megamenu_bg_color']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_bg_color'] : '';
          
-            $mmplus_bg_image = isset($mmplus_builder_options['mmplus_bg_image']) ? "background-image:url({$mmplus_builder_options['mmplus_bg_image']});" : '';
+            $themehunk_megamenu_bg_image = isset($themehunk_megamenu_builder_options['themehunk_megamenu_bg_image']) ? "background-image:url({$themehunk_megamenu_builder_options['themehunk_megamenu_bg_image']});" : '';
             // mega-menu-option
-            $mmth_pannel_alignment = isset($mmplus_builder_options['mmth_pannel_alignment']) ? $mmplus_builder_options['mmth_pannel_alignment']: '';
+            $mmth_pannel_alignment = isset($themehunk_megamenu_builder_options['mmth_pannel_alignment']) ? $themehunk_megamenu_builder_options['mmth_pannel_alignment']: '';
             //pan padding
-            $mmplus_mega_pannel_padding_top = isset($mmplus_builder_options['mmplus_mega_pannel_padding_top']) ? "padding-top:{$mmplus_builder_options['mmplus_mega_pannel_padding_top']}px;":'';
-            $mmplus_mega_pannel_padding_right = isset($mmplus_builder_options['mmplus_mega_pannel_padding_right']) ? "padding-right:{$mmplus_builder_options['mmplus_mega_pannel_padding_right']}px;":'';
-            $mmplus_mega_pannel_padding_bottom = isset($mmplus_builder_options['mmplus_mega_pannel_padding_bottom']) ? "padding-bottom:{$mmplus_builder_options['mmplus_mega_pannel_padding_bottom']}px;":'';
-            $mmplus_mega_pannel_padding_left = isset($mmplus_builder_options['mmplus_mega_pannel_padding_left']) ? "padding-left:{$mmplus_builder_options['mmplus_mega_pannel_padding_left']}px;":'';
+            $themehunk_megamenu_mega_pannel_padding_top = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_padding_top']) ? "padding-top:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_padding_top']}px;":'';
+            $themehunk_megamenu_mega_pannel_padding_right = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_padding_right']) ? "padding-right:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_padding_right']}px;":'';
+            $themehunk_megamenu_mega_pannel_padding_bottom = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_padding_bottom']) ? "padding-bottom:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_padding_bottom']}px;":'';
+            $themehunk_megamenu_mega_pannel_padding_left = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_padding_left']) ? "padding-left:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_padding_left']}px;":'';
             //border-color
-            $mmplus_border_color = isset($mmplus_builder_options['mmplus_border_color']) ? "border-color:{$mmplus_builder_options['mmplus_border_color']};" : '';
-            $mmplus_mega_pannel_border_top = isset($mmplus_builder_options['mmplus_mega_pannel_border_top']) ? "border-top-width:{$mmplus_builder_options['mmplus_mega_pannel_border_top']}px;":'';
-            $mmplus_mega_pannel_border_right = isset($mmplus_builder_options['mmplus_mega_pannel_border_right']) ? "border-right-width:{$mmplus_builder_options['mmplus_mega_pannel_border_right']}px;":'';
-            $mmplus_mega_pannel_border_bottom = isset($mmplus_builder_options['mmplus_mega_pannel_border_bottom']) ? "border-bottom-width:{$mmplus_builder_options['mmplus_mega_pannel_border_bottom']}px;":'';
-            $mmplus_mega_pannel_border_left = isset($mmplus_builder_options['mmplus_mega_pannel_border_left']) ? "border-left-width:{$mmplus_builder_options['mmplus_mega_pannel_border_left']}px;":'';
+            $themehunk_megamenu_border_color = isset($themehunk_megamenu_builder_options['themehunk_megamenu_border_color']) ? "border-color:{$themehunk_megamenu_builder_options['themehunk_megamenu_border_color']};" : '';
+            $themehunk_megamenu_mega_pannel_border_top = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_border_top']) ? "border-top-width:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_border_top']}px;":'';
+            $themehunk_megamenu_mega_pannel_border_right = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_border_right']) ? "border-right-width:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_border_right']}px;":'';
+            $themehunk_megamenu_mega_pannel_border_bottom = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_border_bottom']) ? "border-bottom-width:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_border_bottom']}px;":'';
+            $themehunk_megamenu_mega_pannel_border_left = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_border_left']) ? "border-left-width:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_border_left']}px;":'';
             // border-radius
-            $mmplus_mega_pannel_raidus_top_left = isset($mmplus_builder_options['mmplus_mega_pannel_raidus_top_left']) ? "border-top-left-radius:{$mmplus_builder_options['mmplus_mega_pannel_raidus_top_left']}px;" : '';
-            $mmplus_mega_pannel_raidus_top_right = isset($mmplus_builder_options['mmplus_mega_pannel_raidus_top_right']) ? "border-top-right-radius:{$mmplus_builder_options['mmplus_mega_pannel_raidus_top_right']}px;" : '';
-            $mmplus_mega_pannel_raidus_bottom_right = isset($mmplus_builder_options['mmplus_mega_pannel_raidus_bottom_right']) ? "border-bottom-right-radius:{$mmplus_builder_options['mmplus_mega_pannel_raidus_bottom_right']}px;" : '';
-            $mmplus_mega_pannel_raidus_bottom_left = isset($mmplus_builder_options['mmplus_mega_pannel_raidus_bottom_left']) ? "border-bottom-left-radius:{$mmplus_builder_options['mmplus_mega_pannel_raidus_bottom_left']}px;" : '';
+            $themehunk_megamenu_mega_pannel_raidus_top_left = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_raidus_top_left']) ? "border-top-left-radius:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_raidus_top_left']}px;" : '';
+            $themehunk_megamenu_mega_pannel_raidus_top_right = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_raidus_top_right']) ? "border-top-right-radius:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_raidus_top_right']}px;" : '';
+            $themehunk_megamenu_mega_pannel_raidus_bottom_right = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_raidus_bottom_right']) ? "border-bottom-right-radius:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_raidus_bottom_right']}px;" : '';
+            $themehunk_megamenu_mega_pannel_raidus_bottom_left = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_raidus_bottom_left']) ? "border-bottom-left-radius:{$themehunk_megamenu_builder_options['themehunk_megamenu_mega_pannel_raidus_bottom_left']}px;" : '';
             // color
-            $mmplus_mmplus_widget_title_color = isset($mmplus_builder_options['mmplus_mmplus_widget_title_color']) ? $mmplus_builder_options['mmplus_mmplus_widget_title_color'] : '';
-            $mmplus_megamenu_widget_text_color = isset($mmplus_builder_options['mmplus_megamenu_widget_text_color']) ? $mmplus_builder_options['mmplus_megamenu_widget_text_color'] : '';
-            $mmplus_megamenu_widget_link_color = isset($mmplus_builder_options['mmplus_megamenu_widget_link_color']) ? $mmplus_builder_options['mmplus_megamenu_widget_link_color']: '';
-            $mmplus_megamenu_widget_linkhvr_color = isset($mmplus_builder_options['mmplus_megamenu_widget_linkhvr_color']) ? $mmplus_builder_options['mmplus_megamenu_widget_linkhvr_color'] : '';
-            $mmplus_widget_content_alignment = isset($mmplus_builder_options['mmplus_widget_content_alignment']) ? $mmplus_builder_options['mmplus_widget_content_alignment'] : 'left';
+            $themehunk_megamenu_themehunk_megamenu_widget_title_color = isset($themehunk_megamenu_builder_options['themehunk_megamenu_themehunk_megamenu_widget_title_color']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_themehunk_megamenu_widget_title_color'] : '';
+            $themehunk_megamenu_megamenu_widget_text_color = isset($themehunk_megamenu_builder_options['themehunk_megamenu_megamenu_widget_text_color']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_megamenu_widget_text_color'] : '';
+            $themehunk_megamenu_megamenu_widget_link_color = isset($themehunk_megamenu_builder_options['themehunk_megamenu_megamenu_widget_link_color']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_megamenu_widget_link_color']: '';
+            $themehunk_megamenu_megamenu_widget_linkhvr_color = isset($themehunk_megamenu_builder_options['themehunk_megamenu_megamenu_widget_linkhvr_color']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_megamenu_widget_linkhvr_color'] : '';
+            $themehunk_megamenu_widget_content_alignment = isset($themehunk_megamenu_builder_options['themehunk_megamenu_widget_content_alignment']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_widget_content_alignment'] : 'left';
             // coloum
-            $mmplus_mega_column_padding_top = isset($mmplus_builder_options['mmplus_mega_column_padding_top']) ? $mmplus_builder_options['mmplus_mega_column_padding_top'] : '';
-            $mmplus_mega_column_padding_right = isset($mmplus_builder_options['mmplus_mega_column_padding_right']) ? $mmplus_builder_options['mmplus_mega_column_padding_right'] : '';
-            $mmplus_mega_column_padding_left = isset($mmplus_builder_options['mmplus_mega_column_padding_left']) ? $mmplus_builder_options['mmplus_mega_column_padding_left'] : '';
-            $mmplus_mega_column_padding_bottom = isset($mmplus_builder_options['mmplus_mega_column_padding_bottom']) ? $mmplus_builder_options['mmplus_mega_column_padding_bottom'] : '';
+            $themehunk_megamenu_mega_column_padding_top = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_column_padding_top']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_mega_column_padding_top'] : '';
+            $themehunk_megamenu_mega_column_padding_right = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_column_padding_right']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_mega_column_padding_right'] : '';
+            $themehunk_megamenu_mega_column_padding_left = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_column_padding_left']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_mega_column_padding_left'] : '';
+            $themehunk_megamenu_mega_column_padding_bottom = isset($themehunk_megamenu_builder_options['themehunk_megamenu_mega_column_padding_bottom']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_mega_column_padding_bottom'] : '';
 
-            $mmplus_mmplus_widget_title_color = isset($mmplus_builder_options['mmplus_mmplus_widget_title_color']) ? $mmplus_builder_options['mmplus_mmplus_widget_title_color'] : '';
+            $themehunk_megamenu_themehunk_megamenu_widget_title_color = isset($themehunk_megamenu_builder_options['themehunk_megamenu_themehunk_megamenu_widget_title_color']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_themehunk_megamenu_widget_title_color'] : '';
 
             $data_alignment = $mmth_pannel_alignment;
 
-            $mmplus_endtoend1= isset($mmplus_builder_options['mmplus_endtoend']) ? $mmplus_builder_options['mmplus_endtoend']: '';
-            $mmplus_endtoend = $mmplus_endtoend1;
+            $themehunk_megamenu_endtoend1= isset($themehunk_megamenu_builder_options['themehunk_megamenu_endtoend']) ? $themehunk_megamenu_builder_options['themehunk_megamenu_endtoend']: '';
+            $themehunk_megamenu_endtoend = $themehunk_megamenu_endtoend1;
 
-            $style = 'style="'. $mmplus_width . esc_attr($mmplus_bg_image) . esc_attr( $mmplus_mega_pannel_padding_top) . esc_attr( $mmplus_mega_pannel_padding_right) . esc_attr( $mmplus_mega_pannel_padding_bottom) . esc_attr( $mmplus_mega_pannel_padding_left) . esc_attr($mmplus_border_color) . esc_attr($mmplus_mega_pannel_border_top) . esc_attr($mmplus_mega_pannel_border_right) . esc_attr($mmplus_mega_pannel_border_bottom) . esc_attr($mmplus_mega_pannel_border_left) . esc_attr($mmplus_mega_pannel_raidus_top_left) . esc_attr($mmplus_mega_pannel_raidus_top_right) . esc_attr($mmplus_mega_pannel_raidus_bottom_right) . esc_attr($mmplus_mega_pannel_raidus_bottom_left) .'"';
+            $style = 'style="'. $themehunk_megamenu_width . esc_attr($themehunk_megamenu_bg_image) . esc_attr( $themehunk_megamenu_mega_pannel_padding_top) . esc_attr( $themehunk_megamenu_mega_pannel_padding_right) . esc_attr( $themehunk_megamenu_mega_pannel_padding_bottom) . esc_attr( $themehunk_megamenu_mega_pannel_padding_left) . esc_attr($themehunk_megamenu_border_color) . esc_attr($themehunk_megamenu_mega_pannel_border_top) . esc_attr($themehunk_megamenu_mega_pannel_border_right) . esc_attr($themehunk_megamenu_mega_pannel_border_bottom) . esc_attr($themehunk_megamenu_mega_pannel_border_left) . esc_attr($themehunk_megamenu_mega_pannel_raidus_top_left) . esc_attr($themehunk_megamenu_mega_pannel_raidus_top_right) . esc_attr($themehunk_megamenu_mega_pannel_raidus_bottom_right) . esc_attr($themehunk_megamenu_mega_pannel_raidus_bottom_left) .'"';
 
-            $st_megamenu.="#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mega-sub-menu-mmplus.depth-0:before{
+            $st_megamenu.="#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .mega-sub-menu-themehunk-megamenu.depth-0:before{
                 content:'';
                 position:absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100vh;
-                background:{$mmplus_bg_color};
+                background:{$themehunk_megamenu_bg_color};
             }
-            #mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmplus-col{
-               padding-top:{$mmplus_mega_column_padding_top}px;
-               padding-bottom:{$mmplus_mega_column_padding_bottom}px;
-               padding-left:{$mmplus_mega_column_padding_left}px;
-               padding-right:{$mmplus_mega_column_padding_right}px;
+            #themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-themehunk-megamenu-col{
+               padding-top:{$themehunk_megamenu_mega_column_padding_top}px;
+               padding-bottom:{$themehunk_megamenu_mega_column_padding_bottom}px;
+               padding-left:{$themehunk_megamenu_mega_column_padding_left}px;
+               padding-right:{$themehunk_megamenu_mega_column_padding_right}px;
             }
-            #mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget .mmplus-item-title{
-               color:{$mmplus_mmplus_widget_title_color}!important;
+            #themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget .themehunk-megamenu-item-title{
+               color:{$themehunk_megamenu_themehunk_megamenu_widget_title_color}!important;
             }
-            #mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget,#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget p,#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget h1,#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget h2,#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget h3,#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget h4,#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget h5, #mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget h6, #mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget span{
-               color:{$mmplus_megamenu_widget_text_color}!important;
+            #themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget,#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget p,#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget h1,#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget h2,#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget h3,#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget h4,#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget h5, #themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget h6, #themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget span{
+               color:{$themehunk_megamenu_megamenu_widget_text_color}!important;
            }
-           #mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget a{
-               color:{$mmplus_megamenu_widget_link_color}!important;
+           #themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget a{
+               color:{$themehunk_megamenu_megamenu_widget_link_color}!important;
            }
-           #mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget a:hover{
-               color:{$mmplus_megamenu_widget_linkhvr_color}!important;
+           #themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget a:hover{
+               color:{$themehunk_megamenu_megamenu_widget_linkhvr_color}!important;
            }
         ";
 
-        if( $mmplus_widget_content_alignment=='left'){
-        $st_megamenu.="#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget{text-align:left!important}";
-        }elseif( $mmplus_widget_content_alignment=='center'){
-        $st_megamenu.="#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget{text-align:center!important}";
-        }elseif( $mmplus_widget_content_alignment=='right'){
-        $st_megamenu.="#mmplus-menu-item-$this->item_ID.mmplus-is-megamenu .mmplus-mmth-type-widget{text-align:right!important}";
+        if( $themehunk_megamenu_widget_content_alignment=='left'){
+        $st_megamenu.="#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget{text-align:left!important}";
+        }elseif( $themehunk_megamenu_widget_content_alignment=='center'){
+        $st_megamenu.="#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget{text-align:center!important}";
+        }elseif( $themehunk_megamenu_widget_content_alignment=='right'){
+        $st_megamenu.="#themehunk-megamenu-menu-item-$this->item_ID.themehunk-megamenu-is-megamenu .themehunk-megamenu-mmth-type-widget{text-align:right!important}";
         }
         $stylemegamenu.="<style type='text/css'>";
         $stylemegamenu.= $st_megamenu;
@@ -130,9 +130,9 @@ class MMPlus_Walker extends Walker_Nav_Menu
         echo $stylemegamenu;
 
         }
-        // $this->mmplus_megamenu_render_css($stylemegamenu);  
+        // $this->themehunk_megamenu_megamenu_render_css($stylemegamenu);  
         $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<ul class=\"mega-sub-menu-mmplus depth-$depth  $data_alignment $mmplus_endtoend \" $style  >\n";    
+        $output .= "\n$indent<ul class=\"mega-sub-menu-themehunk-megamenu depth-$depth  $data_alignment $themehunk_megamenu_endtoend \" $style  >\n";    
         
         
     }
@@ -169,9 +169,9 @@ class MMPlus_Walker extends Walker_Nav_Menu
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
         $this->item_ID = $item->ID;
 
-        $this->item_layout  = get_post_meta( $item->ID, 'mmplus_layout', true );
+        $this->item_layout  = get_post_meta( $item->ID, 'themehunk_megamenu_layout', true );
 
-        $this->isMegaMenu   = get_post_meta( $item->ID, 'mmplus_item_megamenu_status', true );
+        $this->isMegaMenu   = get_post_meta( $item->ID, 'themehunk_megamenu_item_megamenu_status', true );
 
 
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
@@ -186,14 +186,14 @@ class MMPlus_Walker extends Walker_Nav_Menu
             array_push( $classes, 'menu-item-has-children' );
         }
 
-        $class_names = implode(' ', apply_filters('mmplus_nav_menu_css_class', array_filter($classes), $item, $args));
+        $class_names = implode(' ', apply_filters('themehunk_megamenu_nav_menu_css_class', array_filter($classes), $item, $args));
         // these classes are prepended with 'mega-'
         $mega_classes = explode( ' ',$class_names);
 
 
         $class_names = ' class="'.esc_attr($class_names).'"';
          
-        $id = apply_filters('nav_menu_item_id', 'mmplus-menu-item-'.$item->ID, $item, $args);
+        $id = apply_filters('nav_menu_item_id', 'themehunk-megamenu-menu-item-'.$item->ID, $item, $args);
         $id = strlen($id) ? ' id="'.esc_attr($id).'"' : '';
 
         $output .= $indent.'<li'.$id.$value.$class_names.$li_attributes.'>';
@@ -217,13 +217,13 @@ class MMPlus_Walker extends Walker_Nav_Menu
 
             $mmth_icon = '';
             if (  ( $depth == 0 ) && $args->has_children ) {
-                $mmplus_builder_options  = get_post_meta( $item->ID, 'mmplus_builder_options', true );
-                $mmth_icon .= isset( $mmplus_builder_options['icon'] ) ? "<span class='mmth-selected-icon'><i class='{$mmplus_builder_options['icon']}'></i></span>" : '';
+                $themehunk_megamenu_builder_options  = get_post_meta( $item->ID, 'themehunk_megamenu_builder_options', true );
+                $mmth_icon .= isset( $themehunk_megamenu_builder_options['icon'] ) ? "<span class='mmth-selected-icon'><i class='{$themehunk_megamenu_builder_options['icon']}'></i></span>" : '';
             }
             if ( isset( $atts['class'] ) && strlen( $atts['class'] ) ){
-                $atts['class'] = $atts['class'] . 'mmplus-menu-link';
+                $atts['class'] = $atts['class'] . 'themehunk-megamenu-menu-link';
             } else {
-                $atts['class'] = 'mmplus-menu-link';
+                $atts['class'] = 'themehunk-megamenu-menu-link';
             } 
             $atts['href'] = ! empty( $item->url ) ? $item->url : '';
 
@@ -265,9 +265,9 @@ class MMPlus_Walker extends Walker_Nav_Menu
             if ( isset( $settings['hide_text'] ) && $settings['hide_text'] == 'true' ) {
                 /** This filter is documented in wp-includes/post-template.php */
             } else if ( property_exists( $item, 'mega_description' ) && strlen( $item->mega_description ) ) {
-                $item_output .= '<span class="mega-description-group"><span class="mega-menu-title">' . $args->link_before . apply_filters( 'mmplus_the_title', $item->title, $item->ID ) . $args->link_after . '</span><span class="mega-menu-description">' . $item->description . '</span></span>';
+                $item_output .= '<span class="mega-description-group"><span class="mega-menu-title">' . $args->link_before . apply_filters( 'themehunk_megamenu_the_title', $item->title, $item->ID ) . $args->link_after . '</span><span class="mega-menu-description">' . $item->description . '</span></span>';
             } else {
-                $item_output .= $args->link_before . apply_filters( 'mmplus_the_title', $item->title, $item->ID ) . $args->link_after;
+                $item_output .= $args->link_before . apply_filters( 'themehunk_megamenu_the_title', $item->title, $item->ID ) . $args->link_after;
             }
 
             if ( is_array( $classes ) && in_array( 'icon-top', $classes ) ) {

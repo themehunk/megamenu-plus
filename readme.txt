@@ -1,4 +1,4 @@
-====== Megamenu-plus - Menu builder ========
+====== ThemeHunk Megamenu - Menu builder ========
 Contributors: ThemeHunk
 Author URI: : https://www.themehunk.com/
 Tags: megamenu, mega menu, menu builder, custom menu
@@ -8,13 +8,13 @@ Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Megamenu plus is a free, fast and most user friendly plugin available for WordPress. This plugin comes with complete styling options for normal and mega menu, You can add page, post, widgets, products, text and custom link in the menu.
+ThemeHunk Megamenu is a free, fast and most user friendly plugin available for WordPress. This plugin comes with complete styling options for normal and mega menu, You can add page, post, widgets, products, text and custom link in the menu.
 
 == Description ==
 
-**Megamenu plus** Megamenu plus is a free, fast and most user friendly plugin available for WordPress. This plugin comes with complete styling options for normal and mega menu, You can add page, post, widgets, products, text and custom link in the menu. You can create mega menu for shop, agency, blog, magazine websites. 
+**ThemeHunk Megamenu** ThemeHunk Megamenu is a free, fast and most user friendly plugin available for WordPress. This plugin comes with complete styling options for normal and mega menu, You can add page, post, widgets, products, text and custom link in the menu. You can create mega menu for shop, agency, blog, magazine websites. 
 
-[Megamenu plus](https://themehunk.com/product/megamenu-plus/)   |  [Docs](https://www.themehunk.com/support/)
+[ThemeHunk Megamenu](https://themehunk.com/product/themehunk-megamenu/)   |  [Docs](https://www.themehunk.com/support/)
 
 **Key Features:-**
 
@@ -29,14 +29,14 @@ Megamenu plus is a free, fast and most user friendly plugin available for WordPr
 
 == Installation ==
 
-1. Upload the `megamenu-plus.zip` to the `/wp-content/plugins/` directory
+1. Upload the `themehunk-megamenu.zip` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Get started from Dashboard > Megamenu-plus
 
 == Frequently Asked Questions ==
 
 = How to Install Plugin =
-Just upload the `megamenu-plus.zip` to the `/wp-content/plugins/` directory, and then activate it from 'Plugins' menu in WordPress.
+Just upload the `themehunk-megamenu.zip` to the `/wp-content/plugins/` directory, and then activate it from 'Plugins' menu in WordPress.
 
 1. [Support Forum](https://www.themehunk.com/support/#plugin.25)
 

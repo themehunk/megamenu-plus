@@ -161,7 +161,7 @@
           },
           resetconfirm: function () {
 			           $(".confirm").on("click", function() {
-			             return confirm(mmplus_options.confirm);
+			             return confirm(themehunk_megamenu_options.confirm);
 			    });
 			},
          setting_save: function () {
@@ -171,7 +171,7 @@
 			        $(".theme_result_message").remove();
 			        $(".spinner").css('visibility', 'visible').css('display', 'block');
 			        $("input#submit").attr('disabled', 'disabled');
-			        var memory_limit_link = $("<a>").attr('href', mmplus_options.increase_memory_limit_url).html(mmplus_options.increase_memory_limit_anchor_text);
+			        var memory_limit_link = $("<a>").attr('href', themehunk_megamenu_options.increase_memory_limit_url).html(themehunk_megamenu_options.increase_memory_limit_anchor_text);
 			        $.ajax({
 			            url:ajaxurl,
 			            async: true,
@@ -183,13 +183,13 @@
 			                    var icon = $("<span>").addClass('dashicons dashicons-yes');
 			                    $('.megamenu_submit .mega_left').append(success.html(icon).append(message.data));
 			                } else if (message.success == false) { // Errors in scss
-			                    var error = $("<p>").addClass('fail theme_result_message').html(mmplus_options.theme_save_error + " ").append(mmplus_options.theme_save_error_refresh).append("<br /><br />").append(message.data);
+			                    var error = $("<p>").addClass('fail theme_result_message').html(themehunk_megamenu_options.theme_save_error + " ").append(themehunk_megamenu_options.theme_save_error_refresh).append("<br /><br />").append(message.data);
 			                    $('.megamenu_submit').after(error);
 			                } else {
 			                    if (message.indexOf("exhausted") >= 0) {
-			                        var error = $("<p>").addClass('fail theme_result_message').html(mmplus_options.theme_save_error + " ").append(mmplus_options.theme_save_error_exhausted + " ").append(mmplus_options.theme_save_error_memory_limit + " ").append(memory_limit_link).append("<br />").append(message);
+			                        var error = $("<p>").addClass('fail theme_result_message').html(themehunk_megamenu_options.theme_save_error + " ").append(themehunk_megamenu_options.theme_save_error_exhausted + " ").append(themehunk_megamenu_options.theme_save_error_memory_limit + " ").append(memory_limit_link).append("<br />").append(message);
 			                    } else {
-			                        var error = $("<p>").addClass('fail theme_result_message').html(mmplus_options.theme_save_error + "<br />").append(message);
+			                        var error = $("<p>").addClass('fail theme_result_message').html(themehunk_megamenu_options.theme_save_error + "<br />").append(message);
 			                    }
 			                    $('.megamenu_submit').after(error);
 			                }
@@ -197,10 +197,10 @@
 			            error: function(message) {
 			            	
 			                if(message.status == 500) { // 500 error with no response from server
-			                    var error = $("<p>").addClass('fail theme_result_message').html(mmplus_options.theme_save_error_500 + " ").append(mmplus_options.theme_save_error_memory_limit + " ").append(memory_limit_link);
+			                    var error = $("<p>").addClass('fail theme_result_message').html(themehunk_megamenu_options.theme_save_error_500 + " ").append(themehunk_megamenu_options.theme_save_error_memory_limit + " ").append(memory_limit_link);
 			                } else {
 			                    if (message.responseText == "-1") { // nonce check failed
-			                        var error = $("<p>").addClass('fail theme_result_message').html(mmplus_options.theme_save_error + " " + mmplus_options.theme_save_error_nonce_failed );
+			                        var error = $("<p>").addClass('fail theme_result_message').html(themehunk_megamenu_options.theme_save_error + " " + themehunk_megamenu_options.theme_save_error_nonce_failed );
 			                    }
 			                }
 			                $('.megamenu_submit').after(error);
